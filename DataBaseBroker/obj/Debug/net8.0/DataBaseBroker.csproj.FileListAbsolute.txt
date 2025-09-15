@@ -1,0 +1,15 @@
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.csproj.AssemblyReference.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.GeneratedMSBuildEditorConfig.editorconfig
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.AssemblyInfoInputs.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.AssemblyInfo.cs
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.csproj.CoreCompileInputs.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\bin\Debug\net8.0\DataBaseBroker.deps.json
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\bin\Debug\net8.0\DataBaseBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\bin\Debug\net8.0\DataBaseBroker.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\bin\Debug\net8.0\Common.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\bin\Debug\net8.0\Common.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBase.2104BB1D.Up2Date
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\refint\DataBaseBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\DataBaseBroker.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DataBaseBroker\obj\Debug\net8.0\ref\DataBaseBroker.dll

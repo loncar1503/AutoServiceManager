@@ -1,0 +1,17 @@
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\DBBroker.deps.json
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\DBBroker.runtimeconfig.json
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\DBBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\DBBroker.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\Common.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\bin\Debug\net8.0\Common.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.csproj.AssemblyReference.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.GeneratedMSBuildEditorConfig.editorconfig
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.AssemblyInfoInputs.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.AssemblyInfo.cs
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.csproj.CoreCompileInputs.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.csproj.Up2Date
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\refint\DBBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.genruntimeconfig.cache
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\ref\DBBroker.dll

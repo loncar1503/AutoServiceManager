@@ -1,0 +1,73 @@
+﻿     
+     Prvo stavi da forma bude tipa KryptonForm
+     Zatim prevuci kryptonpalette da ima i onda ovo prekopiraj u initialize components
+     
+     
+            components = new System.ComponentModel.Container();
+            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
+            SuspendLayout();
+            // 
+            // kryptonPalette1
+            // 
+            kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleOrange;
+            kryptonPalette1.ButtonSpecs.FormClose.Image = Image.FromFile("Images/exit.png");
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.ColorStyle = PaletteColorStyle.Solid;
+
+            kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
+            kryptonPalette1.ButtonSpecs.FormMax.Image = Image.FromFile("Images/maximize.png");
+            kryptonPalette1.ButtonSpecs.FormMin.Image = Image.FromFile("Images/minimize.png");
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Color1 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = Color.FromArgb(24, 24, 24);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = Color.FromArgb(24, 24, 24);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.Color1 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.Color2 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateNormal.Back.Color1 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateNormal.Back.Color2 = Color.FromArgb(30, 30, 30);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateNormal.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = Color.FromArgb(45, 45, 45);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = Color.FromArgb(45, 45, 45);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color1 = Color.FromArgb(40, 40, 40);
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color2 = Color.FromArgb(40, 40, 40);
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Width = 0;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(40, 40, 40);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(40, 40, 40);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 14;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(35, 35, 35);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(35, 35, 35);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonPadding = new Padding(-1, 8, 8, -1);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(20, -1, -1, -1);
+           
+            // 
+            // FrmLogin
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(40, 40, 40);
+            ClientSize = new Size(844, 480);
+            Font = new Font("Segoe UI", 9F);
+            Margin = new Padding(2, 3, 2, 3);
+            Name = <<UNESI IME FORME >>;
+            Palette = kryptonPalette1;
+            PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = <<UNESI SVOJ>>;
+            TransparencyKey = Color.FromArgb(30, 30, 30);
+            ResumeLayout(false);
