@@ -29,16 +29,16 @@ namespace Server.SystemOperation.Vehicle
         public void AddVehicle(Vozilo vozilo)
         {
             var klijent = vozilo.Klijent;
-            context.Klijenti.Update(klijent);
-            context.SaveChanges();
-
-
-            vozilo.KlijentId = klijent.Id;
-            vozilo.Klijent = null; // da EF ne pokuša ponovo insert
-            context.Vozila.Add(vozilo);
-            context.SaveChanges();
-
-
+            if (klijent!=null)
+            {
+                context.Klijenti.Add(klijent);
+                context.SaveChanges();
+                vozilo.KlijentId = klijent.Id;
+                vozilo.Klijent = null; // da EF ne pokusa ponovo insert
+            }
+                context.Vozila.Add(vozilo);
+                context.SaveChanges();
+           
         }
     }
 }

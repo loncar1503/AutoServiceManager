@@ -75,9 +75,6 @@ namespace Client.UserControls
             controller.createNewSelected();
         }
 
-        private void btnDodajVlasnika_Click(object sender, EventArgs e)
-        {
-            controller.AddOwner();
-        }
+     
     }
 }

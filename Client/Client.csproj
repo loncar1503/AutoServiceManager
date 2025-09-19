@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>autoservis_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="autoservis_icon.ico" />
     <Content Include="Images\exit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

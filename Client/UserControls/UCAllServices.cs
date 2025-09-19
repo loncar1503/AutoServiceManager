@@ -37,8 +37,13 @@ namespace Client.UserControls
             if (controller != null)
             {
 
-            controller.CheckedChanged();
+                controller.CheckedChanged();
             }
+        }
+
+        private void btnGraph_Click(object sender, EventArgs e)
+        {
+            controller.ViewGraph();
         }
     }
 }

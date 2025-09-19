@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class StavkaServisa: IEntity
+    public class StavkaServisa
     {
         public int Rb { get; set; } // Redni broj stavke
         public double Cena { get; set; }
@@ -18,12 +18,6 @@ namespace Common.Domain
         public int UslugaId { get; set; }
         public Usluga Usluga { get; set; }
 
-        public string NazivTabele => "StavkeServisa";
 
-        public string Vrednosti => $"{Rb}, {ServisId}, {Cena.ToString()}, {UslugaId},'{Napomena}'";
-
-        public string Kolone => "(Rb, ServisId, Cena, UslugaId, Napomena)";
-
-        public string Output => "";
     }
 }

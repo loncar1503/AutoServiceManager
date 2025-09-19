@@ -38,34 +38,43 @@ namespace Server.SystemOperation.Vehicle
                 throw new Exception("Vozilo nije pronađeno.");
 
             dbVozilo.GodinaProizvodnje = incoming.GodinaProizvodnje;
-            dbVozilo.ModelVozilaId = incoming.ModelVozilaId;   
+            dbVozilo.ModelVozilaId = incoming.ModelVozilaId;
 
-
-            if (incoming.KlijentId == dbVozilo.KlijentId)
+            if (incoming.Klijent != null)
             {
-                if (incoming.Klijent != null)
-                {
-                    dbVozilo.Klijent.Ime = incoming.Klijent.Ime;
-                    dbVozilo.Klijent.Prezime = incoming.Klijent.Prezime;
-                    dbVozilo.Klijent.BrojTelefona = incoming.Klijent.BrojTelefona;
-                }
+
+                dbVozilo.KlijentId = incoming.KlijentId;
+                dbVozilo.Klijent = incoming.Klijent; // da EF ne pokusa ponovo insert
             }
             else
             {
-                var novi = context.Klijenti.FirstOrDefault(k => k.Id == incoming.KlijentId);
-                if (novi == null)
-                    throw new Exception("Izabrani klijent ne postoji.");
-
-                if (incoming.Klijent != null)
-                {
-                    novi.Ime = incoming.Klijent.Ime;
-                    novi.Prezime = incoming.Klijent.Prezime;
-                    novi.BrojTelefona = incoming.Klijent.BrojTelefona;
-                }
-
-                dbVozilo.KlijentId = novi.Id;     
-                                                 
+                dbVozilo.KlijentId = incoming.KlijentId;
             }
+            //if (incoming.KlijentId == dbVozilo.KlijentId)
+            //{
+            //    if (incoming.Klijent != null)
+            //    {
+            //        dbVozilo.Klijent.Ime = incoming.Klijent.Ime;
+            //        dbVozilo.Klijent.Prezime = incoming.Klijent.Prezime;
+            //        dbVozilo.Klijent.BrojTelefona = incoming.Klijent.BrojTelefona;
+            //    }
+            //}
+            //else
+            //{
+            //    var novi = context.Klijenti.FirstOrDefault(k => k.Id == incoming.KlijentId);
+            //    if (novi == null)
+            //        throw new Exception("Izabrani klijent ne postoji.");
+
+            //    if (incoming.Klijent != null)
+            //    {
+            //        novi.Ime = incoming.Klijent.Ime;
+            //        novi.Prezime = incoming.Klijent.Prezime;
+            //        novi.BrojTelefona = incoming.Klijent.BrojTelefona;
+            //    }
+
+            //    dbVozilo.KlijentId = novi.Id;     
+
+            //}
         }
     }
 }

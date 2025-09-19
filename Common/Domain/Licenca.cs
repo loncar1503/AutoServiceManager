@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Licenca: IEntity
+    public class Licenca
     {
         public int Id { get; set; }  // idLicence
         public string Naziv { get; set; }
@@ -16,12 +16,6 @@ namespace Common.Domain
 
         public List<MajstorLicenca> MajstorLicenca { get; set; }
 
-        public string NazivTabele => "Licence";
 
-        public string Vrednosti => $"'{Naziv}', '{Institucija}', '{Kategorija}'";
-
-        public string Kolone => "(Naziv, Institucija, Kategorija)";
-
-        public string Output => "Id";
     }
 }

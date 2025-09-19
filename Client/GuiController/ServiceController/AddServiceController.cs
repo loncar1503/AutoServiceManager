@@ -62,8 +62,14 @@ namespace Client.GuiController.ServiceController
         }
         public void AddService()
         {
+            forma.cmbUsluga.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbVozilo.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbMehanicar.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+
             if (!ValidirajPodatke())
             {
+                MessageBox.Show("You need to fill all required fields!");
+
                 return;
             }
             Majstor m = (Majstor)forma.cmbMehanicar.SelectedItem;
@@ -110,30 +116,44 @@ namespace Client.GuiController.ServiceController
 
         internal void AddServiceItem()
         {
-            Usluga job = (Usluga)forma.cmbUsluga.SelectedItem;
-            StavkaServisa sI = new StavkaServisa()
-            {
-                Rb = serviceItems.Count() + 1,
-                Cena = job.Cena,
-                Napomena = forma.txtNote.Text,
-                UslugaId = job.Id,
-                Usluga = job
-            };
-            serviceItems.Add(sI);
 
-            forma.txtNote.Text = "";
-            forma.cmbUsluga.SelectedIndex = -1;
-            if (forma.txtUkupnaCena.Text == "")
+            try
             {
-                forma.txtUkupnaCena.Text = sI.Cena + " RSD";
+                Usluga job = (Usluga)forma.cmbUsluga.SelectedItem;
+                if (job == null)
+                {
+                    MessageBox.Show("Please select job that you want to add to the service!"); ;
+                    return;
+                }
+                StavkaServisa sI = new StavkaServisa()
+                {
+                    Rb = serviceItems.Count() + 1,
+                    Cena = job.Cena,
+                    Napomena = forma.txtNote.Text,
+                    UslugaId = job.Id,
+                    Usluga = job
+                };
+                serviceItems.Add(sI);
+
+                forma.txtNote.Text = "";
+                forma.cmbUsluga.SelectedIndex = -1;
+                if (forma.txtUkupnaCena.Text == "")
+                {
+                    forma.txtUkupnaCena.Text = sI.Cena + " RSD";
+                }
+                else
+                {
+
+                    forma.txtUkupnaCena.Text = (Int32.Parse(forma.txtUkupnaCena.Text.Split()[0]) + sI.Cena).ToString() + " RSD";
+                }
+                forma.cmbUsluga.SelectedIndex = -1;
+                forma.txtNote.Text = "";
             }
-            else
+            catch (NullReferenceException ex)
             {
 
-                forma.txtUkupnaCena.Text = (Int32.Parse(forma.txtUkupnaCena.Text.Split()[0]) + sI.Cena).ToString()+" RSD";
+                MessageBox.Show("You need to choose job that you want to add to the service!");;
             }
-            forma.cmbUsluga.SelectedIndex = -1;
-            forma.txtNote.Text = "";
         }
 
         internal void DeleteServiceItem()
@@ -304,25 +324,28 @@ namespace Client.GuiController.ServiceController
         }
         private bool ValidirajPodatke()
         {
+            bool valid = true;
+
             if (forma.cmbMehanicar.SelectedItem == null)
             {
-                MessageBox.Show("Please select the Mechanic.");
-                return false;
+                forma.cmbMehanicar.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+
+                valid = false;
             }
             if (forma.cmbVozilo.SelectedItem == null)
             {
-                MessageBox.Show("Please select the Vehicle.");
-                return false;
+                forma.cmbVozilo.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid = false;
             }
             if (serviceItems.Count() == 0)
             {
-                MessageBox.Show("You need to select at least one job");
-                return false;
+                forma.cmbUsluga.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid = false;
             }
 
 
 
-            return true;
+            return valid;
         }
 
         

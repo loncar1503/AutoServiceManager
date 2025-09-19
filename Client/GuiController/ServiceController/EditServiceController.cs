@@ -54,8 +54,12 @@ namespace Client.GuiController.ServiceController
 
         public void SaveServiceChanges()
         {
+            forma.cmbUsluga.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbVozilo.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbMehanicar.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
             if (!ValidirajPodatke())
             {
+                MessageBox.Show("You need to fill all required fields!");
                 return;
             }
             Majstor m = (Majstor)forma.cmbMehanicar.SelectedItem;
@@ -247,21 +251,28 @@ namespace Client.GuiController.ServiceController
         }
         private bool ValidirajPodatke()
         {
+            bool valid = true;
+
             if (forma.cmbMehanicar.SelectedItem == null)
             {
-                MessageBox.Show("Please select the Mechanic.");
-                return false;
+                forma.cmbMehanicar.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+
+                valid = false;
             }
             if (forma.cmbVozilo.SelectedItem == null)
             {
-                MessageBox.Show("Please select the Vehicle.");
-                return false;
+                forma.cmbVozilo.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid = false;
+            }
+            if (serviceItems.Count() == 0)
+            {
+                forma.cmbUsluga.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid = false;
             }
 
 
 
-
-            return true;
+            return valid;
         }
 
         

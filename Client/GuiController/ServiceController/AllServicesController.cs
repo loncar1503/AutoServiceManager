@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Security.Policy;
 
 namespace Client.GuiController.ServiceController
 {
@@ -211,6 +213,13 @@ namespace Client.GuiController.ServiceController
             }
         }
 
-        
+        internal void ViewGraph()
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = "http://localhost:3000/goto/y7ncBfjHg?orgId=1",
+                UseShellExecute = true
+            });
+        }
     }
 }

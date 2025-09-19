@@ -23,12 +23,17 @@ namespace Client.GuiController.Licence
 
         internal void SaveLicence()
         {
+            forma.txtName.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbInstitution.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbCategory.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
             if (!ValidirajPodatke())
             {
+                MessageBox.Show("You need to fill all required fields!");
                 return;
             }
             Licenca l= new Licenca()
             {
+
                 Institucija = forma.cmbInstitution.SelectedValue.ToString(),
                 Kategorija = forma.cmbCategory.SelectedValue.ToString(),
                 Naziv = forma.txtName.Text
@@ -81,26 +86,24 @@ namespace Client.GuiController.Licence
 
         private bool ValidirajPodatke()
         {
+            bool valid = true;
             if (forma.txtName.Text == "")
             {
-                MessageBox.Show("Please type the name of the licence.");
-                return false;
+                forma.txtName.StateCommon.Back.Color1 = Color.Salmon;
+                valid= false;
             }
             if (forma.cmbInstitution.SelectedItem == null)
             {
-                MessageBox.Show("Please select the Institution.");
-                return false;
+                forma.cmbInstitution.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid= false;
             }
             if (forma.cmbCategory.SelectedItem == null)
             {
-                MessageBox.Show("Please select the category.");
-                return false;
+                forma.cmbCategory.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid = false;
             }
 
-
-
-
-            return true;
+            return valid;
         }
     }
 }

@@ -9,7 +9,6 @@
       "Server/1.0.0": {
         "dependencies": {
           "DBBroker": "1.0.0",
-          "DataBaseBroker": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.7",
           "ComponentFactory.Krypton.Toolkit": "1.0.0"
@@ -973,18 +972,6 @@
           }
         }
       },
-      "DataBaseBroker/1.0.0": {
-        "dependencies": {
-          "Common": "1.0.0",
-          "Microsoft.Data.SqlClient": "5.1.6"
-        },
-        "runtime": {
-          "DataBaseBroker.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "DBBroker/1.0.0": {
         "dependencies": {
           "Common": "1.0.0",
@@ -1567,11 +1554,6 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DataBaseBroker/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

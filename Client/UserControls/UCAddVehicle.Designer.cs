@@ -47,7 +47,6 @@ namespace Client.UserControls
             kryptonLabel2 = new KryptonLabel();
             cmbModel = new KryptonComboBox();
             kryptonButton1 = new KryptonButton();
-            btnDodajVlasnika = new KryptonButton();
             btnCreateNewOwner = new KryptonButton();
             btnChooseOwner = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)cmbMarka).BeginInit();
@@ -61,14 +60,14 @@ namespace Client.UserControls
             txtRegBroj.Anchor = AnchorStyles.None;
             txtRegBroj.Location = new Point(272, 165);
             txtRegBroj.Name = "txtRegBroj";
-            txtRegBroj.Size = new Size(278, 35);
+            txtRegBroj.Size = new Size(278, 38);
             txtRegBroj.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtRegBroj.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtRegBroj.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtRegBroj.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtRegBroj.StateCommon.Border.Rounding = 12;
             txtRegBroj.StateCommon.Border.Width = 1;
-            txtRegBroj.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            txtRegBroj.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtRegBroj.TabIndex = 2;
             // 
             // txtGodinaProizv
@@ -76,14 +75,14 @@ namespace Client.UserControls
             txtGodinaProizv.Anchor = AnchorStyles.None;
             txtGodinaProizv.Location = new Point(269, 432);
             txtGodinaProizv.Name = "txtGodinaProizv";
-            txtGodinaProizv.Size = new Size(281, 35);
+            txtGodinaProizv.Size = new Size(281, 38);
             txtGodinaProizv.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtGodinaProizv.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtGodinaProizv.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtGodinaProizv.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtGodinaProizv.StateCommon.Border.Rounding = 12;
             txtGodinaProizv.StateCommon.Border.Width = 1;
-            txtGodinaProizv.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            txtGodinaProizv.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtGodinaProizv.TabIndex = 4;
             // 
             // lblRN
@@ -125,12 +124,12 @@ namespace Client.UserControls
             cmbMarka.DropDownWidth = 281;
             cmbMarka.Location = new Point(272, 254);
             cmbMarka.Name = "cmbMarka";
-            cmbMarka.Size = new Size(281, 50);
-            cmbMarka.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbMarka.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbMarka.Size = new Size(281, 40);
             cmbMarka.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbMarka.StateCommon.ComboBox.Border.Rounding = 20;
             cmbMarka.StateCommon.ComboBox.Border.Width = 1;
+            cmbMarka.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbMarka.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbMarka.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbMarka.StateCommon.Item.Border.Rounding = 20;
             cmbMarka.StateCommon.Item.Border.Width = 1;
@@ -153,7 +152,6 @@ namespace Client.UserControls
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(60, 60, 60);
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(cmbOwners);
             panel1.Controls.Add(txtBrTel);
             panel1.Controls.Add(txtPrezime);
             panel1.Controls.Add(txtIme);
@@ -161,7 +159,7 @@ namespace Client.UserControls
             panel1.Controls.Add(kryptonLabel3);
             panel1.Controls.Add(kryptonLabel2);
             panel1.ForeColor = SystemColors.ControlText;
-            panel1.Location = new Point(705, 207);
+            panel1.Location = new Point(705, 254);
             panel1.Name = "panel1";
             panel1.Size = new Size(384, 174);
             panel1.TabIndex = 10;
@@ -171,34 +169,32 @@ namespace Client.UserControls
             // 
             cmbOwners.Anchor = AnchorStyles.None;
             cmbOwners.DropDownWidth = 281;
+            cmbOwners.Location = new Point(718, 208);
             cmbOwners.Name = "cmbOwners";
-            cmbOwners.Size = new Size(353, 50);
-            cmbOwners.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbOwners.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbOwners.Size = new Size(353, 40);
             cmbOwners.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbOwners.StateCommon.ComboBox.Border.Rounding = 20;
             cmbOwners.StateCommon.ComboBox.Border.Width = 1;
+            cmbOwners.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbOwners.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbOwners.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbOwners.StateCommon.Item.Border.Rounding = 20;
             cmbOwners.StateCommon.Item.Border.Width = 1;
             cmbOwners.TabIndex = 29;
-            cmbOwners.Parent = this;
-            cmbOwners.Location = this.PointToClient(panel1.PointToScreen(cmbOwners.Location));
             // 
             // txtBrTel
             // 
             txtBrTel.Anchor = AnchorStyles.None;
             txtBrTel.Location = new Point(144, 116);
             txtBrTel.Name = "txtBrTel";
-            txtBrTel.Size = new Size(195, 35);
+            txtBrTel.Size = new Size(195, 38);
             txtBrTel.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtBrTel.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtBrTel.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtBrTel.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtBrTel.StateCommon.Border.Rounding = 12;
-            txtBrTel.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
             txtBrTel.StateCommon.Border.Width = 1;
-
+            txtBrTel.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtBrTel.TabIndex = 16;
             // 
             // txtPrezime
@@ -206,14 +202,14 @@ namespace Client.UserControls
             txtPrezime.Anchor = AnchorStyles.None;
             txtPrezime.Location = new Point(144, 65);
             txtPrezime.Name = "txtPrezime";
-            txtPrezime.Size = new Size(195, 35);
+            txtPrezime.Size = new Size(195, 38);
             txtPrezime.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtPrezime.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtPrezime.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtPrezime.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtPrezime.StateCommon.Border.Rounding = 12;
             txtPrezime.StateCommon.Border.Width = 1;
-            txtPrezime.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            txtPrezime.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtPrezime.TabIndex = 15;
             // 
             // txtIme
@@ -221,14 +217,14 @@ namespace Client.UserControls
             txtIme.Anchor = AnchorStyles.None;
             txtIme.Location = new Point(144, 11);
             txtIme.Name = "txtIme";
-            txtIme.Size = new Size(195, 35);
+            txtIme.Size = new Size(195, 38);
             txtIme.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtIme.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtIme.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtIme.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtIme.StateCommon.Border.Rounding = 12;
             txtIme.StateCommon.Border.Width = 1;
-            txtIme.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            txtIme.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtIme.TabIndex = 12;
             // 
             // kryptonLabel4
@@ -270,12 +266,12 @@ namespace Client.UserControls
             cmbModel.DropDownWidth = 281;
             cmbModel.Location = new Point(272, 348);
             cmbModel.Name = "cmbModel";
-            cmbModel.Size = new Size(281, 50);
-            cmbModel.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbModel.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbModel.Size = new Size(281, 40);
             cmbModel.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbModel.StateCommon.ComboBox.Border.Rounding = 20;
             cmbModel.StateCommon.ComboBox.Border.Width = 1;
+            cmbModel.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbModel.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbModel.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbModel.StateCommon.Item.Border.Rounding = 20;
             cmbModel.StateCommon.Item.Border.Width = 1;
@@ -321,47 +317,6 @@ namespace Client.UserControls
             kryptonButton1.TabIndex = 13;
             kryptonButton1.Values.Text = "Add vehicle";
             kryptonButton1.Click += kryptonButton1_Click;
-            // 
-            // btnDodajVlasnika
-            // 
-            btnDodajVlasnika.Anchor = AnchorStyles.None;
-            btnDodajVlasnika.Location = new Point(806, 426);
-            btnDodajVlasnika.Name = "btnDodajVlasnika";
-            btnDodajVlasnika.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.OverrideDefault.Back.ColorAngle = 45F;
-            btnDodajVlasnika.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.OverrideDefault.Border.Rounding = 20;
-            btnDodajVlasnika.OverrideDefault.Border.Width = 1;
-            btnDodajVlasnika.PaletteMode = PaletteMode.ProfessionalSystem;
-            btnDodajVlasnika.Size = new Size(142, 39);
-            btnDodajVlasnika.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateCommon.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StateCommon.Border.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.StateCommon.Border.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateCommon.Border.ColorAngle = 45F;
-            btnDodajVlasnika.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
-            btnDodajVlasnika.StateCommon.Border.Rounding = 20;
-            btnDodajVlasnika.StateCommon.Border.Width = 1;
-            btnDodajVlasnika.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
-            btnDodajVlasnika.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDodajVlasnika.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
-            btnDodajVlasnika.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
-            btnDodajVlasnika.StatePressed.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StatePressed.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StatePressed.Border.Rounding = 20;
-            btnDodajVlasnika.StatePressed.Border.Width = 1;
-            btnDodajVlasnika.StateTracking.Back.Color1 = Color.FromArgb(192, 64, 0);
-            btnDodajVlasnika.StateTracking.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateTracking.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StateTracking.Border.Rounding = 20;
-            btnDodajVlasnika.StateTracking.Border.Width = 1;
-            btnDodajVlasnika.TabIndex = 25;
-            btnDodajVlasnika.Values.Text = "Add owner";
-            btnDodajVlasnika.Click += btnDodajVlasnika_Click;
             // 
             // btnCreateNewOwner
             // 
@@ -410,9 +365,9 @@ namespace Client.UserControls
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
+            Controls.Add(cmbOwners);
             Controls.Add(btnChooseOwner);
             Controls.Add(btnCreateNewOwner);
-            Controls.Add(btnDodajVlasnika);
             Controls.Add(kryptonButton1);
             Controls.Add(cmbModel);
             Controls.Add(panel1);
@@ -452,7 +407,6 @@ namespace Client.UserControls
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPrezime;
         public ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbModel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        public ComponentFactory.Krypton.Toolkit.KryptonButton btnDodajVlasnika;
         public ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateNewOwner;
         public KryptonButton btnChooseOwner;
         public KryptonComboBox cmbOwners;

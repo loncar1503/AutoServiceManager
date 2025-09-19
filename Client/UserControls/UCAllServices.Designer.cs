@@ -38,6 +38,7 @@ namespace Client.UserControls
             btnEdit = new KryptonButton();
             chckAny = new KryptonCheckBox();
             lblJob = new KryptonLabel();
+            btnGraph = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)dgvAllServices).BeginInit();
             SuspendLayout();
             // 
@@ -225,11 +226,53 @@ namespace Client.UserControls
             lblJob.TabIndex = 42;
             lblJob.Values.Text = "Dates:";
             // 
+            // btnGraph
+            // 
+            btnGraph.Anchor = AnchorStyles.None;
+            btnGraph.Location = new Point(62, 477);
+            btnGraph.Name = "btnGraph";
+            btnGraph.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
+            btnGraph.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnGraph.OverrideDefault.Back.ColorAngle = 45F;
+            btnGraph.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnGraph.OverrideDefault.Border.Rounding = 20;
+            btnGraph.OverrideDefault.Border.Width = 1;
+            btnGraph.PaletteMode = PaletteMode.ProfessionalSystem;
+            btnGraph.Size = new Size(142, 39);
+            btnGraph.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
+            btnGraph.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnGraph.StateCommon.Back.ColorAngle = 45F;
+            btnGraph.StateCommon.Border.Color1 = Color.FromArgb(210, 106, 8);
+            btnGraph.StateCommon.Border.Color2 = Color.FromArgb(210, 85, 2);
+            btnGraph.StateCommon.Border.ColorAngle = 45F;
+            btnGraph.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnGraph.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
+            btnGraph.StateCommon.Border.Rounding = 20;
+            btnGraph.StateCommon.Border.Width = 1;
+            btnGraph.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
+            btnGraph.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGraph.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
+            btnGraph.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
+            btnGraph.StatePressed.Back.ColorAngle = 45F;
+            btnGraph.StatePressed.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnGraph.StatePressed.Border.Rounding = 20;
+            btnGraph.StatePressed.Border.Width = 1;
+            btnGraph.StateTracking.Back.Color1 = Color.FromArgb(192, 64, 0);
+            btnGraph.StateTracking.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnGraph.StateTracking.Back.ColorAngle = 45F;
+            btnGraph.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnGraph.StateTracking.Border.Rounding = 20;
+            btnGraph.StateTracking.Border.Width = 1;
+            btnGraph.TabIndex = 43;
+            btnGraph.Values.Text = "View graph";
+            btnGraph.Click += btnGraph_Click;
+            // 
             // UCAllServices
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
+            Controls.Add(btnGraph);
             Controls.Add(lblJob);
             Controls.Add(chckAny);
             Controls.Add(btnEdit);
@@ -255,5 +298,6 @@ namespace Client.UserControls
         private KryptonButton btnEdit;
         public KryptonCheckBox chckAny;
         public KryptonLabel lblJob;
+        private KryptonButton btnGraph;
     }
 }

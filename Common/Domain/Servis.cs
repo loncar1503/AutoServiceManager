@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Servis : IEntity
+    public class Servis 
     {
         public int Id { get; set; }  // idServis
         public string OpisProblema { get; set; }
@@ -21,12 +21,6 @@ namespace Common.Domain
 
         public List<StavkaServisa> Stavke { get; set; }
 
-        public string NazivTabele => "Servisi";
 
-        public string Vrednosti => $"'{OpisProblema}', '{DatumPrijema.ToString("yyyy-MM-dd")}', {UkupnaCena.ToString()}, {MajstorId}, '{VoziloRegBroj}'";
-
-        public string Kolone => "(OpisProblema, DatumPrijema, UkupnaCena, MajstorId, VoziloRegBroj)";
-
-        public string Output => "Id";
     }
 }

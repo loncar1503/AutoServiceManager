@@ -118,9 +118,7 @@ namespace Server
                     case Operation.AddOwner:
                         
                         k = JsonSerializer.Deserialize<Klijent>((JsonElement)req.Argument);
-                        int KId=Controller.Instance.AddOwner(k);
-                        k.Id = KId;
-                        r.Result = k;
+                        Controller.Instance.AddOwner(k);
                         break;
                     case Operation.AddService:
                         s = JsonSerializer.Deserialize<Servis>((JsonElement)req.Argument);

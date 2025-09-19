@@ -3,8 +3,68 @@
   "WorkspaceRootPath": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF3B4154-A290-4D4B-ACB3-54449945EE93}|Server\\Server.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\server\\systemoperation\\service\\editserviceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF3B4154-A290-4D4B-ACB3-54449945EE93}|Server\\Server.csproj|solutionrelative:server\\systemoperation\\service\\editserviceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\client.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\client.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\servicecontroller\\allservicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\servicecontroller\\allservicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\usercontrols\\ucallservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucallservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\client\\usercontrols\\ucallservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucallservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\servicecontroller\\addservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\servicecontroller\\addservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C858702C-B796-4AB3-A555-857F8BB6170E}|DBBroker\\DBBroker.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\dbbroker\\data\\app.dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C858702C-B796-4AB3-A555-857F8BB6170E}|DBBroker\\DBBroker.csproj|solutionrelative:dbbroker\\data\\app.dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\vehiclecontroller\\addvehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\vehiclecontroller\\addvehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\vehiclecontroller\\editvehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\vehiclecontroller\\editvehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\servicecontroller\\editservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\servicecontroller\\editservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\frmeditvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\frmeditvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\client\\frmeditvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\frmeditvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\client\\frmeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\frmeditservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\client\\usercontrols\\ucaddvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\usercontrols\\ucaddvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|d:\\folderi sa c\\faks\\vii semestar\\softveri\\softveri projekat\\autoservis\\client\\guicontroller\\licence\\addlicencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\guicontroller\\licence\\addlicencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\client\\usercontrols\\ucaddservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA97DE2-2ED9-4830-9788-51545047E2A1}|Client\\Client.csproj|solutionrelative:client\\usercontrols\\ucaddservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,15 +103,192 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditServiceSO.cs",
-              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Server\\SystemOperation\\Service\\EditServiceSO.cs",
-              "RelativeDocumentMoniker": "Server\\SystemOperation\\Service\\EditServiceSO.cs",
-              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Server\\SystemOperation\\Service\\EditServiceSO.cs",
-              "RelativeToolTip": "Server\\SystemOperation\\Service\\EditServiceSO.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T15:36:39.397Z",
+              "Title": "Client",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\Client.csproj",
+              "RelativeDocumentMoniker": "Client\\Client.csproj",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\Client.csproj",
+              "RelativeToolTip": "Client\\Client.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-19T21:11:05.57Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AllServicesController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\AllServicesController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\ServiceController\\AllServicesController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\AllServicesController.cs",
+              "RelativeToolTip": "Client\\GuiController\\ServiceController\\AllServicesController.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAUwMwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T20:52:53.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UCAllServices.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAllServices.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAllServices.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAllServices.cs",
+              "RelativeToolTip": "Client\\UserControls\\UCAllServices.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwC0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T20:51:36.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UCAllServices.cs [Design]",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAllServices.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAllServices.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAllServices.cs [Design]",
+              "RelativeToolTip": "Client\\UserControls\\UCAllServices.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T20:51:10.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.DbContext.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\DBBroker\\Data\\App.DbContext.cs",
+              "RelativeDocumentMoniker": "DBBroker\\Data\\App.DbContext.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\DBBroker\\Data\\App.DbContext.cs",
+              "RelativeToolTip": "DBBroker\\Data\\App.DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T19:02:03.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditVehicleController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\VehicleController\\EditVehicleController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\VehicleController\\EditVehicleController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\VehicleController\\EditVehicleController.cs",
+              "RelativeToolTip": "Client\\GuiController\\VehicleController\\EditVehicleController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAMwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:11:26.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmEditVehicle.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditVehicle.cs",
+              "RelativeDocumentMoniker": "Client\\FrmEditVehicle.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditVehicle.cs",
+              "RelativeToolTip": "Client\\FrmEditVehicle.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwDkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:12:53.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddServiceController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\AddServiceController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\ServiceController\\AddServiceController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\AddServiceController.cs",
+              "RelativeToolTip": "Client\\GuiController\\ServiceController\\AddServiceController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAA5wHwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:01:42.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditServiceController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\EditServiceController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\ServiceController\\EditServiceController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\ServiceController\\EditServiceController.cs",
+              "RelativeToolTip": "Client\\GuiController\\ServiceController\\EditServiceController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwD0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:05:53.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddVehicleController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\VehicleController\\AddVehicleController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\VehicleController\\AddVehicleController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\VehicleController\\AddVehicleController.cs",
+              "RelativeToolTip": "Client\\GuiController\\VehicleController\\AddVehicleController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwEwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:06:56.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FrmEditService.cs [Design]",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditService.cs",
+              "RelativeDocumentMoniker": "Client\\FrmEditService.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditService.cs [Design]",
+              "RelativeToolTip": "Client\\FrmEditService.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:12:34.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UCAddVehicle.cs [Design]",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddVehicle.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddVehicle.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddVehicle.cs [Design]",
+              "RelativeToolTip": "Client\\UserControls\\UCAddVehicle.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:13:55.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmEditVehicle.cs [Design]",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditVehicle.cs",
+              "RelativeDocumentMoniker": "Client\\FrmEditVehicle.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\FrmEditVehicle.cs [Design]",
+              "RelativeToolTip": "Client\\FrmEditVehicle.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:14:00.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UCAddVehicle.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddVehicle.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddVehicle.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddVehicle.cs",
+              "RelativeToolTip": "Client\\UserControls\\UCAddVehicle.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwE0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:13:32.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UCAddService.cs [Design]",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddService.cs",
+              "RelativeDocumentMoniker": "Client\\UserControls\\UCAddService.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\UserControls\\UCAddService.cs [Design]",
+              "RelativeToolTip": "Client\\UserControls\\UCAddService.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:04:11.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddLicenceController.cs",
+              "DocumentMoniker": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\Licence\\AddLicenceController.cs",
+              "RelativeDocumentMoniker": "Client\\GuiController\\Licence\\AddLicenceController.cs",
+              "ToolTip": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Client\\GuiController\\Licence\\AddLicenceController.cs",
+              "RelativeToolTip": "Client\\GuiController\\Licence\\AddLicenceController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAqwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:01:36.808Z"
             }
           ]
         }

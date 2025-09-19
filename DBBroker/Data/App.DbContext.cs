@@ -24,7 +24,7 @@ namespace Server.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Automehanicar;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseSqlServer(@"Data Source=DRORDJEL\SQLEXPRESS;Initial Catalog=Automehanicar;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
         public AppDbContext()
         {
@@ -72,7 +72,7 @@ namespace Server.Data
                 .HasForeignKey(s => s.MajstorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Servis → Vozilo
+           
             modelBuilder.Entity<Servis>()
                 .HasOne(s => s.Vozilo)
                 .WithMany()
@@ -110,8 +110,7 @@ namespace Server.Data
                 .WithMany(m => m.Vozila)
                 .HasForeignKey(v => v.ModelVozilaId);
 
-            // (opciono) ograničenja dužina:
-            modelBuilder.Entity<Vozilo>().Property(v => v.RegBroj).HasMaxLength(20);
+         
         }
     }
     

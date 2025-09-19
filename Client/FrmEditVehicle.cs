@@ -55,7 +55,7 @@ namespace Client
             if (result == DialogResult.Yes)
             {
                 controller.SaveChanges();
-                this.Close();
+                
             }
 
         }
@@ -70,9 +70,6 @@ namespace Client
             controller.createNewSelected();
         }
 
-        private void btnDodajVlasnika_Click(object sender, EventArgs e)
-        {
-            controller.AddOwner();
-        }
+       
     }
 }

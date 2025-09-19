@@ -111,27 +111,27 @@ namespace Server
         }
         internal void AddVehicle(Vozilo? v)
         {
-            SystemOperationBaseSQL so = new AddVehicleSQLSO();
-            so.IzvrsiSO(v);
-            //SystemOperationBase so = new AddVehicleSO(v);
-            //so.ExecuteTemplate();
+            //SystemOperationBaseSQL so = new AddVehicleSQLSO();
+            //so.IzvrsiSO(v);
+            SystemOperationBase so = new AddVehicleSO(v);
+            so.ExecuteTemplate();
 
         }
 
-        internal int AddOwner(Klijent? k)
+        internal void AddOwner(Klijent? k)
         {
-            SystemOperationBaseSQL so = new AddOwnerSQLSO();
-            so.IzvrsiSO(k);
-            //SystemOperationBase so = new AddVehicleSO(v);
-            //so.ExecuteTemplate();
-            return ((AddOwnerSQLSO)so).Rezultat;
+            //SystemOperationBaseSQL so = new AddOwnerSQLSO();
+            //so.IzvrsiSO(k);
+            SystemOperationBase so = new AddOwnerSO(k);
+            so.ExecuteTemplate();
+            
         }
         internal void AddService(Servis? s)
         {
-            SystemOperationBaseSQL so = new AddServiceSQLSO();
-            so.IzvrsiSO(s);
-            //SystemOperationBase so = new AddServiceSO(s);
-            //so.ExecuteTemplate();
+            //SystemOperationBaseSQL so = new AddServiceSQLSO();
+            //so.IzvrsiSO(s);
+            SystemOperationBase so = new AddServiceSO(s);
+            so.ExecuteTemplate();
         }
         internal void ChangeVehicle(Vozilo v)
         {
@@ -147,8 +147,8 @@ namespace Server
 
         internal void AddLicence(MajstorLicenca? ml)
         {
-            SystemOperationBaseSQL so = new AddLicenceSQLSO();
-            so.IzvrsiSO(ml);
+            SystemOperationBase so = new AddLicenceSO(ml);
+            so.ExecuteTemplate();
         }
 
         internal void EditService(Servis? s)

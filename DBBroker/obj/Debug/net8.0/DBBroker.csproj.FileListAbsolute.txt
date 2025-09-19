@@ -15,3 +15,4 @@ D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.pdb
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.genruntimeconfig.cache
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\ref\DBBroker.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\DBBroker\obj\Debug\net8.0\DBBroker.sourcelink.json

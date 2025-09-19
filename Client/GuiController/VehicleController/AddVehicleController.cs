@@ -58,12 +58,17 @@ namespace Client.GuiController.VehicleController
 
         internal void AddVehicle()
         {
+            forma.txtRegBroj.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.txtGodinaProizv.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.txtBrTel.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.txtPrezime.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.txtIme.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbModel.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+            forma.cmbMarka.StateCommon.ComboBox.Back.Color1 = Color.WhiteSmoke;
+
             if (!ValidirajPodatke()){
+                MessageBox.Show("You need to fill all required fields!");
                 return;
-            }
-            if(forma.panel1.Visible==false)
-            {
-                owner.Id = ((Klijent)forma.cmbOwners.SelectedItem).Id;
             }
             Vozilo v = new Vozilo
             {
@@ -71,15 +76,28 @@ namespace Client.GuiController.VehicleController
                 GodinaProizvodnje = int.Parse(forma.txtGodinaProizv.Text),
                 ModelVozilaId = ((ModelVozila)forma.cmbModel.SelectedValue).Id,
                 
-                KlijentId =owner.Id
+
+
                 //Klijent = new Common.Domain.Klijent
                 //{
-
                 //    //Ime = forma.txtIme.Text,
                 //    //Prezime = forma.txtPrezime.Text,
                 //    //BrojTelefona = forma.txtBrTel.Text
                 //}
             };
+            if (forma.panel1.Visible==false)
+            {
+                owner.Id = ((Klijent)forma.cmbOwners.SelectedItem).Id;
+                v.KlijentId = owner.Id;
+            }
+            else
+            {
+                owner.Ime = forma.txtIme.Text;
+                owner.Prezime = forma.txtPrezime.Text;
+                owner.BrojTelefona = forma.txtBrTel.Text;
+                v.Klijent = owner;
+            }
+
 
             try
             {
@@ -109,7 +127,6 @@ namespace Client.GuiController.VehicleController
             forma.btnCreateNewOwner.StateCommon.Content.ShortText.Color1 = Color.Orange;
             forma.btnChooseOwner.StateCommon.Content.ShortText.Color1 = Color.White;
             forma.panel1.Visible = false;
-            forma.btnDodajVlasnika.Visible = false;
             forma.cmbOwners.Visible = true;
 
         }
@@ -119,7 +136,6 @@ namespace Client.GuiController.VehicleController
             forma.btnCreateNewOwner.StateCommon.Content.ShortText.Color1 = Color.White;
             forma.btnChooseOwner.StateCommon.Content.ShortText.Color1 = Color.Orange;
             forma.panel1.Visible = true;
-            forma.btnDodajVlasnika.Visible = true;
             forma.cmbOwners.Visible = false;
 
         }
@@ -166,50 +182,51 @@ namespace Client.GuiController.VehicleController
         }
         private bool ValidirajPodatke()
         {
+            bool valid = true;
             if (forma.cmbMarka.SelectedItem == null)
             {
-                MessageBox.Show("Molimo vas izaberite marku.");
-                return false;
+                forma.cmbMarka.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid= false;
             }
             if(forma.cmbModel.SelectedItem == null)
             {
-                MessageBox.Show("Molimo vas odaberite model.");
-                return false;
+                forma.cmbModel.StateCommon.ComboBox.Back.Color1 = Color.Salmon;
+                valid= false;
             }
             if (forma.panel1.Visible && string.IsNullOrWhiteSpace(forma.txtIme.Text))
             {
-                MessageBox.Show("Polje za ime ne sme biti prazno.");
-                return false;
+                forma.txtIme.StateCommon.Back.Color1 = Color.Salmon;
+                valid= false;
             }
             if (forma.panel1.Visible && string.IsNullOrWhiteSpace(forma.txtPrezime.Text))
             {
-                MessageBox.Show("Polje za prezime ne sme biti prazno.");
-                return false;
+                forma.txtPrezime.StateCommon.Back.Color1 = Color.Salmon;
+                valid = false;
             }
             if (forma.panel1.Visible && string.IsNullOrWhiteSpace(forma.txtBrTel.Text))
             {
-                MessageBox.Show("Polje za broj telefona ne sme biti prazno.");
-                return false;
+                forma.txtBrTel.StateCommon.Back.Color1 = Color.Salmon;
+                valid = false;
             }
             if (string.IsNullOrWhiteSpace(forma.txtGodinaProizv.Text))
             {
-                MessageBox.Show("Polje za godinu proizvodnje ne sme biti prazno.");
-                return false;
+                forma.txtGodinaProizv.StateCommon.Back.Color1 = Color.Salmon;
+                valid = false;
             }
             if (string.IsNullOrWhiteSpace(forma.txtRegBroj.Text))
             {
-                MessageBox.Show("Polje za registraciju ne sme biti prazno.");
-                return false;
+                forma.txtRegBroj.StateCommon.Back.Color1 = Color.Salmon;
+                valid = false;
             }
             if (forma.panel1.Visible && !forma.txtBrTel.Text.StartsWith("+381"))
             {
                 MessageBox.Show("Polje za broj telefona mora zapocinjati sa +381");
-                return false;
+                valid = false;
             }
             if (forma.panel1.Visible && !System.Text.RegularExpressions.Regex.IsMatch(forma.txtIme.Text, @"^[A-ZŠĐČĆŽ][a-zšđčćž]+$"))
             {
                 MessageBox.Show("Ime može sadržavati samo slova i mora poceti velikim slovom.");
-                return false;
+                valid = false;
             }
 
             
@@ -217,12 +234,12 @@ namespace Client.GuiController.VehicleController
             if (forma.panel1.Visible && !System.Text.RegularExpressions.Regex.IsMatch(forma.txtPrezime.Text, @"^[A-ZŠĐČĆŽ][a-zšđčćž]+$"))
             {
                 MessageBox.Show("Prezime može sadržavati samo slova i mora poceti velikim slovom.");
-                return false;
+                valid = false;
             }
 
             
 
-            return true;
+            return valid;
         }
     }
 }

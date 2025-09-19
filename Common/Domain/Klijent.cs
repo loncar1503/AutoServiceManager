@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Klijent: IEntity
+    public class Klijent
     {
         public int Id { get; set; }  // idKlijent
         public string Ime { get; set; }
@@ -23,12 +23,5 @@ namespace Common.Domain
         }
 
 
-        public string NazivTabele => "Klijenti";
-
-        public string Vrednosti => $"'{Ime}', '{Prezime}', '{BrojTelefona}'";
-
-
-        public string Kolone => "(Ime, Prezime, BrojTelefona)";
-        public string Output => "Id";
     }
 }

@@ -9,3 +9,4 @@ D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Common\o
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Common\obj\Debug\net8.0\refint\Common.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Common\obj\Debug\net8.0\Common.pdb
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Common\obj\Debug\net8.0\ref\Common.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Common\obj\Debug\net8.0\Common.sourcelink.json

@@ -44,14 +44,13 @@ namespace Client
             txtRegBroj = new KryptonTextBox();
             btnChooseOwner = new KryptonButton();
             btnCreateNewOwner = new KryptonButton();
-            btnDodajVlasnika = new KryptonButton();
             panel1 = new Panel();
             txtBrTel = new KryptonTextBox();
-            txtPrezime = new KryptonTextBox();
             txtIme = new KryptonTextBox();
-            kryptonLabel4 = new KryptonLabel();
-            kryptonLabel3 = new KryptonLabel();
+            txtPrezime = new KryptonTextBox();
             kryptonLabel2 = new KryptonLabel();
+            kryptonLabel3 = new KryptonLabel();
+            kryptonLabel4 = new KryptonLabel();
             cmbOwners = new KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)cmbModel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cmbMarka).BeginInit();
@@ -292,47 +291,6 @@ namespace Client
             btnCreateNewOwner.Values.Text = "Create new owner";
             btnCreateNewOwner.Click += btnCreateNewOwner_Click;
             // 
-            // btnDodajVlasnika
-            // 
-            btnDodajVlasnika.Anchor = AnchorStyles.None;
-            btnDodajVlasnika.Location = new Point(868, 411);
-            btnDodajVlasnika.Name = "btnDodajVlasnika";
-            btnDodajVlasnika.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.OverrideDefault.Back.ColorAngle = 45F;
-            btnDodajVlasnika.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.OverrideDefault.Border.Rounding = 20;
-            btnDodajVlasnika.OverrideDefault.Border.Width = 1;
-            btnDodajVlasnika.PaletteMode = PaletteMode.ProfessionalSystem;
-            btnDodajVlasnika.Size = new Size(142, 39);
-            btnDodajVlasnika.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateCommon.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StateCommon.Border.Color1 = Color.FromArgb(210, 106, 8);
-            btnDodajVlasnika.StateCommon.Border.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateCommon.Border.ColorAngle = 45F;
-            btnDodajVlasnika.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
-            btnDodajVlasnika.StateCommon.Border.Rounding = 20;
-            btnDodajVlasnika.StateCommon.Border.Width = 1;
-            btnDodajVlasnika.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
-            btnDodajVlasnika.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDodajVlasnika.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
-            btnDodajVlasnika.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
-            btnDodajVlasnika.StatePressed.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StatePressed.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StatePressed.Border.Rounding = 20;
-            btnDodajVlasnika.StatePressed.Border.Width = 1;
-            btnDodajVlasnika.StateTracking.Back.Color1 = Color.FromArgb(192, 64, 0);
-            btnDodajVlasnika.StateTracking.Back.Color2 = Color.FromArgb(210, 85, 2);
-            btnDodajVlasnika.StateTracking.Back.ColorAngle = 45F;
-            btnDodajVlasnika.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            btnDodajVlasnika.StateTracking.Border.Rounding = 20;
-            btnDodajVlasnika.StateTracking.Border.Width = 1;
-            btnDodajVlasnika.TabIndex = 30;
-            btnDodajVlasnika.Values.Text = "Add owner";
-            btnDodajVlasnika.Click += btnDodajVlasnika_Click;
-            // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
@@ -365,21 +323,6 @@ namespace Client
             txtBrTel.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtBrTel.TabIndex = 16;
             // 
-            // txtPrezime
-            // 
-            txtPrezime.Anchor = AnchorStyles.None;
-            txtPrezime.Location = new Point(138, 67);
-            txtPrezime.Name = "txtPrezime";
-            txtPrezime.Size = new Size(195, 38);
-            txtPrezime.StateCommon.Back.Color1 = Color.WhiteSmoke;
-            txtPrezime.StateCommon.Border.Color1 = Color.WhiteSmoke;
-            txtPrezime.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            txtPrezime.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
-            txtPrezime.StateCommon.Border.Rounding = 12;
-            txtPrezime.StateCommon.Border.Width = 1;
-            txtPrezime.StateCommon.Content.Font = new Font("Poppins", 9.2F);
-            txtPrezime.TabIndex = 15;
-            // 
             // txtIme
             // 
             txtIme.Anchor = AnchorStyles.None;
@@ -395,16 +338,31 @@ namespace Client
             txtIme.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtIme.TabIndex = 12;
             // 
-            // kryptonLabel4
+            // txtPrezime
             // 
-            kryptonLabel4.Anchor = AnchorStyles.None;
-            kryptonLabel4.Location = new Point(48, 67);
-            kryptonLabel4.Name = "kryptonLabel4";
-            kryptonLabel4.Size = new Size(84, 22);
-            kryptonLabel4.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel4.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel4.TabIndex = 14;
-            kryptonLabel4.Values.Text = "Surname:";
+            txtPrezime.Anchor = AnchorStyles.None;
+            txtPrezime.Location = new Point(138, 67);
+            txtPrezime.Name = "txtPrezime";
+            txtPrezime.Size = new Size(195, 38);
+            txtPrezime.StateCommon.Back.Color1 = Color.WhiteSmoke;
+            txtPrezime.StateCommon.Border.Color1 = Color.WhiteSmoke;
+            txtPrezime.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            txtPrezime.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
+            txtPrezime.StateCommon.Border.Rounding = 12;
+            txtPrezime.StateCommon.Border.Width = 1;
+            txtPrezime.StateCommon.Content.Font = new Font("Poppins", 9.2F);
+            txtPrezime.TabIndex = 15;
+            // 
+            // kryptonLabel2
+            // 
+            kryptonLabel2.Anchor = AnchorStyles.None;
+            kryptonLabel2.Location = new Point(72, 14);
+            kryptonLabel2.Name = "kryptonLabel2";
+            kryptonLabel2.Size = new Size(60, 22);
+            kryptonLabel2.StateCommon.ShortText.Color1 = Color.Orange;
+            kryptonLabel2.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel2.TabIndex = 12;
+            kryptonLabel2.Values.Text = "Name:";
             // 
             // kryptonLabel3
             // 
@@ -417,16 +375,16 @@ namespace Client
             kryptonLabel3.TabIndex = 13;
             kryptonLabel3.Values.Text = "Phone number:";
             // 
-            // kryptonLabel2
+            // kryptonLabel4
             // 
-            kryptonLabel2.Anchor = AnchorStyles.None;
-            kryptonLabel2.Location = new Point(72, 14);
-            kryptonLabel2.Name = "kryptonLabel2";
-            kryptonLabel2.Size = new Size(60, 22);
-            kryptonLabel2.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel2.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            kryptonLabel2.TabIndex = 12;
-            kryptonLabel2.Values.Text = "Name:";
+            kryptonLabel4.Anchor = AnchorStyles.None;
+            kryptonLabel4.Location = new Point(48, 67);
+            kryptonLabel4.Name = "kryptonLabel4";
+            kryptonLabel4.Size = new Size(84, 22);
+            kryptonLabel4.StateCommon.ShortText.Color1 = Color.Orange;
+            kryptonLabel4.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel4.TabIndex = 14;
+            kryptonLabel4.Values.Text = "Surname:";
             // 
             // cmbOwners
             // 
@@ -454,7 +412,6 @@ namespace Client
             Controls.Add(cmbOwners);
             Controls.Add(btnChooseOwner);
             Controls.Add(btnCreateNewOwner);
-            Controls.Add(btnDodajVlasnika);
             Controls.Add(panel1);
             Controls.Add(kryptonButton1);
             Controls.Add(cmbModel);
@@ -496,7 +453,6 @@ namespace Client
         public KryptonTextBox txtRegBroj;
         public KryptonButton btnChooseOwner;
         public KryptonButton btnCreateNewOwner;
-        public KryptonButton btnDodajVlasnika;
         public Panel panel1;
         public KryptonComboBox cmbOwners;
         public KryptonTextBox txtBrTel;

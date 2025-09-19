@@ -145,5 +145,4 @@ D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\b
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\DBBroker.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\DBBroker.pdb
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\Common.pdb
-D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\DataBaseBroker.dll
-D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\DataBaseBroker.pdb
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\obj\Debug\net8.0-windows\Server.sourcelink.json

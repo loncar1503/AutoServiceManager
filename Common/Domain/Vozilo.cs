@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Vozilo : IEntity
+    public class Vozilo 
     {
         public string RegBroj { get; set; }  // regBroj je primarni ključ
         public int ModelVozilaId { get; set; }
@@ -17,24 +17,6 @@ namespace Common.Domain
         public int KlijentId { get; set; }
         public Klijent Klijent { get; set; }
 
-        public string NazivTabele => "Vozila";
-
-        public string Vrednosti => $"'{RegBroj}', {KlijentId}, {GodinaProizvodnje}, {ModelVozilaId}";
-
-
-        public string Kolone => "(RegBroj, KlijentId, GodinaProizvodnje, ModelVozilaId)";
-
-        //public string Uslov => throw new NotImplementedException();
-
-        //public string UslovBezAlijasa => throw new NotImplementedException();
-
-        public string Output => "";
-
-        //public string Kriterijum => throw new NotImplementedException();
-
-        //public string JoinUslov => throw new NotImplementedException();
-
-        //public string UpdateUslov => throw new NotImplementedException();
 
         public override string ToString()
         {
