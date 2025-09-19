@@ -45,5 +45,10 @@ namespace Client.UserControls
         {
             controller.ViewGraph();
         }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            controller.CreateServiceReport();
+        }
     }
 }

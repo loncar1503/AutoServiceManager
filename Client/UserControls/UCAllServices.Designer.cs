@@ -39,6 +39,7 @@ namespace Client.UserControls
             chckAny = new KryptonCheckBox();
             lblJob = new KryptonLabel();
             btnGraph = new KryptonButton();
+            kryptonButton2 = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)dgvAllServices).BeginInit();
             SuspendLayout();
             // 
@@ -267,11 +268,53 @@ namespace Client.UserControls
             btnGraph.Values.Text = "View graph";
             btnGraph.Click += btnGraph_Click;
             // 
+            // kryptonButton2
+            // 
+            kryptonButton2.Anchor = AnchorStyles.None;
+            kryptonButton2.Location = new Point(36, 583);
+            kryptonButton2.Name = "kryptonButton2";
+            kryptonButton2.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
+            kryptonButton2.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
+            kryptonButton2.OverrideDefault.Back.ColorAngle = 45F;
+            kryptonButton2.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButton2.OverrideDefault.Border.Rounding = 20;
+            kryptonButton2.OverrideDefault.Border.Width = 1;
+            kryptonButton2.PaletteMode = PaletteMode.ProfessionalSystem;
+            kryptonButton2.Size = new Size(206, 43);
+            kryptonButton2.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
+            kryptonButton2.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
+            kryptonButton2.StateCommon.Back.ColorAngle = 45F;
+            kryptonButton2.StateCommon.Border.Color1 = Color.FromArgb(210, 106, 8);
+            kryptonButton2.StateCommon.Border.Color2 = Color.FromArgb(210, 85, 2);
+            kryptonButton2.StateCommon.Border.ColorAngle = 45F;
+            kryptonButton2.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButton2.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
+            kryptonButton2.StateCommon.Border.Rounding = 20;
+            kryptonButton2.StateCommon.Border.Width = 1;
+            kryptonButton2.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
+            kryptonButton2.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonButton2.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
+            kryptonButton2.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
+            kryptonButton2.StatePressed.Back.ColorAngle = 45F;
+            kryptonButton2.StatePressed.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButton2.StatePressed.Border.Rounding = 20;
+            kryptonButton2.StatePressed.Border.Width = 1;
+            kryptonButton2.StateTracking.Back.Color1 = Color.FromArgb(192, 64, 0);
+            kryptonButton2.StateTracking.Back.Color2 = Color.FromArgb(210, 85, 2);
+            kryptonButton2.StateTracking.Back.ColorAngle = 45F;
+            kryptonButton2.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButton2.StateTracking.Border.Rounding = 20;
+            kryptonButton2.StateTracking.Border.Width = 1;
+            kryptonButton2.TabIndex = 44;
+            kryptonButton2.Values.Text = "Create service report";
+            kryptonButton2.Click += kryptonButton2_Click;
+            // 
             // UCAllServices
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
+            Controls.Add(kryptonButton2);
             Controls.Add(btnGraph);
             Controls.Add(lblJob);
             Controls.Add(chckAny);
@@ -299,5 +342,6 @@ namespace Client.UserControls
         public KryptonCheckBox chckAny;
         public KryptonLabel lblJob;
         private KryptonButton btnGraph;
+        private KryptonButton kryptonButton2;
     }
 }

@@ -20,10 +20,12 @@ namespace Server.SystemOperation.Service
         protected override void ExecuteConcreteOperation()
         {
             Result = context.Servisi
-               .Include(s => s.Majstor)
+               .Include(s => s.Majstor)      
                .Include(s => s.Vozilo)
                    .ThenInclude(v => v.ModelVozila)
                        .ThenInclude(m => m.Marka)
+                .Include(s => s.Vozilo)                
+                    .ThenInclude(v => v.Klijent)
                .Include(s => s.Stavke)
                    .ThenInclude(st => st.Usluga)
                .AsNoTracking()      

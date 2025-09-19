@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AmfVeOtke8s=",
+  "dgSpecHash": "AS0aVcijPeU=",
   "success": true,
   "projectFilePath": "D:\\FOLDERI SA C\\FAKS\\VII semestar\\Softveri\\Softveri projekat\\Autoservis\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\drlon\\.nuget\\packages\\questpdf\\2025.7.1\\questpdf.2025.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

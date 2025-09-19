@@ -221,5 +221,19 @@ namespace Client.GuiController.ServiceController
                 UseShellExecute = true
             });
         }
+
+        internal void CreateServiceReport()
+        {
+            if (forma.dgvAllServices.SelectedRows.Count > 0)
+            {
+                Servis servis = Communication.Instance.PosaljiZahtevVratiRezultat<Servis>(Common.Communication.Operation.GetService,
+                   forma.dgvAllServices.SelectedRows[0].DataBoundItem as Servis);
+                ServicePdfGenerator.GenerateFromEntity(servis);
+            }
+            else
+            {
+                MessageBox.Show("Select a service to generate a report for");
+            }
+        }
     }
 }
