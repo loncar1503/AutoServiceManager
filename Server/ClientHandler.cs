@@ -140,6 +140,10 @@ namespace Server
                         v = JsonSerializer.Deserialize<Vozilo>((JsonElement)req.Argument);
                         Controller.Instance.DeleteVehicle(v);
                         break;
+                    case Operation.DeleteService:
+                        s= JsonSerializer.Deserialize<Servis>((JsonElement)(req.Argument));
+                        Controller.Instance.DeleteService(s);
+                        break;
 
                 }
             }

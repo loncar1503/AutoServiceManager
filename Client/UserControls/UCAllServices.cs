@@ -50,5 +50,10 @@ namespace Client.UserControls
         {
             controller.CreateServiceReport();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            controller.DeleteService();
+        }
     }
 }

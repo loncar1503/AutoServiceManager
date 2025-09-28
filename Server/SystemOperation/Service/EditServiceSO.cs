@@ -26,10 +26,29 @@ namespace Server.SystemOperation.Service
                 .FirstOrDefault(s => s.Id == servis.Id);
             if (db == null) throw new Exception("Servis ne postoji.");
 
-            context.RemoveRange(db.Stavke);   
+            var keepIds = (servis.Stavke ?? new List<StavkaServisa>())
+                    .Where(x => x.Id > 0)
+                    .Select(x => x.Id)
+                    .ToList();
 
+            foreach (var old in db.Stavke.Where(ss => !keepIds.Contains(ss.Id)).ToList())
+                context.StavkeServisa.Remove(old);
+            var nove = (servis.Stavke ?? new List<StavkaServisa>())
+                .Where(x => x.Id == 0)
+                .ToList();
 
-            db.Stavke = servis.Stavke;
+            foreach (var n in nove)
+            {
+                n.Id = 0;                  
+                n.ServisId = db.Id;
+                n.Usluga = null;          
+                db.Stavke.Add(n);
+            }
+
+            int rb = 1;
+            foreach (var st in db.Stavke.OrderBy(x => x.Rb).ThenBy(x => x.Id))
+                st.Rb = rb++;
+         
             db.OpisProblema = servis.OpisProblema;
             db.DatumPrijema = servis.DatumPrijema;
             db.UkupnaCena = servis.UkupnaCena;

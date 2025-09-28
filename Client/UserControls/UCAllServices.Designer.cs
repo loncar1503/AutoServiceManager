@@ -40,6 +40,7 @@ namespace Client.UserControls
             lblJob = new KryptonLabel();
             btnGraph = new KryptonButton();
             kryptonButton2 = new KryptonButton();
+            btnDelete = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)dgvAllServices).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@ namespace Client.UserControls
             // 
             dgvAllServices.Anchor = AnchorStyles.None;
             dgvAllServices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAllServices.Location = new Point(297, 142);
+            dgvAllServices.Location = new Point(129, 157);
             dgvAllServices.Name = "dgvAllServices";
             dgvAllServices.RowHeadersWidth = 51;
             dgvAllServices.Size = new Size(959, 401);
@@ -74,7 +75,7 @@ namespace Client.UserControls
             // kryptonButton1
             // 
             kryptonButton1.Anchor = AnchorStyles.None;
-            kryptonButton1.Location = new Point(62, 152);
+            kryptonButton1.Location = new Point(908, 77);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
             kryptonButton1.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
@@ -83,7 +84,7 @@ namespace Client.UserControls
             kryptonButton1.OverrideDefault.Border.Rounding = 20;
             kryptonButton1.OverrideDefault.Border.Width = 1;
             kryptonButton1.PaletteMode = PaletteMode.ProfessionalSystem;
-            kryptonButton1.Size = new Size(142, 39);
+            kryptonButton1.Size = new Size(163, 39);
             kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
             kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
             kryptonButton1.StateCommon.Back.ColorAngle = 45F;
@@ -115,7 +116,7 @@ namespace Client.UserControls
             // txtCondition
             // 
             txtCondition.Anchor = AnchorStyles.None;
-            txtCondition.Location = new Point(62, 63);
+            txtCondition.Location = new Point(202, 73);
             txtCondition.Name = "txtCondition";
             txtCondition.Size = new Size(254, 35);
             txtCondition.StateCommon.Back.Color1 = Color.WhiteSmoke;
@@ -132,7 +133,7 @@ namespace Client.UserControls
             dtpDateFrom.Anchor = AnchorStyles.None;
             dtpDateFrom.CustomFormat = "dd.MM.yyyy";
             dtpDateFrom.Format = DateTimePickerFormat.Custom;
-            dtpDateFrom.Location = new Point(349, 63);
+            dtpDateFrom.Location = new Point(489, 73);
             dtpDateFrom.Name = "dtpDateFrom";
             dtpDateFrom.Size = new Size(145, 43);
             dtpDateFrom.StateActive.Back.Color1 = Color.White;
@@ -150,7 +151,7 @@ namespace Client.UserControls
             dtpDateTo.Anchor = AnchorStyles.None;
             dtpDateTo.CustomFormat = "dd.MM.yyyy";
             dtpDateTo.Format = DateTimePickerFormat.Custom;
-            dtpDateTo.Location = new Point(555, 63);
+            dtpDateTo.Location = new Point(695, 73);
             dtpDateTo.Name = "dtpDateTo";
             dtpDateTo.Size = new Size(160, 43);
             dtpDateTo.StateActive.Back.Color1 = Color.White;
@@ -166,7 +167,7 @@ namespace Client.UserControls
             // btnEdit
             // 
             btnEdit.Anchor = AnchorStyles.None;
-            btnEdit.Location = new Point(62, 348);
+            btnEdit.Location = new Point(206, 620);
             btnEdit.Name = "btnEdit";
             btnEdit.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
             btnEdit.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
@@ -175,7 +176,7 @@ namespace Client.UserControls
             btnEdit.OverrideDefault.Border.Rounding = 20;
             btnEdit.OverrideDefault.Border.Width = 1;
             btnEdit.PaletteMode = PaletteMode.ProfessionalSystem;
-            btnEdit.Size = new Size(142, 39);
+            btnEdit.Size = new Size(170, 39);
             btnEdit.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
             btnEdit.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
             btnEdit.StateCommon.Back.ColorAngle = 45F;
@@ -207,7 +208,7 @@ namespace Client.UserControls
             // chckAny
             // 
             chckAny.Anchor = AnchorStyles.None;
-            chckAny.Location = new Point(431, 24);
+            chckAny.Location = new Point(571, 34);
             chckAny.Name = "chckAny";
             chckAny.Size = new Size(54, 25);
             chckAny.StateCommon.ShortText.Color1 = Color.FromArgb(255, 128, 0);
@@ -219,7 +220,7 @@ namespace Client.UserControls
             // lblJob
             // 
             lblJob.Anchor = AnchorStyles.None;
-            lblJob.Location = new Point(349, 25);
+            lblJob.Location = new Point(489, 35);
             lblJob.Name = "lblJob";
             lblJob.Size = new Size(67, 24);
             lblJob.StateCommon.ShortText.Color1 = Color.Orange;
@@ -230,7 +231,7 @@ namespace Client.UserControls
             // btnGraph
             // 
             btnGraph.Anchor = AnchorStyles.None;
-            btnGraph.Location = new Point(62, 477);
+            btnGraph.Location = new Point(677, 621);
             btnGraph.Name = "btnGraph";
             btnGraph.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
             btnGraph.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
@@ -239,7 +240,7 @@ namespace Client.UserControls
             btnGraph.OverrideDefault.Border.Rounding = 20;
             btnGraph.OverrideDefault.Border.Width = 1;
             btnGraph.PaletteMode = PaletteMode.ProfessionalSystem;
-            btnGraph.Size = new Size(142, 39);
+            btnGraph.Size = new Size(175, 39);
             btnGraph.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
             btnGraph.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
             btnGraph.StateCommon.Back.ColorAngle = 45F;
@@ -271,7 +272,7 @@ namespace Client.UserControls
             // kryptonButton2
             // 
             kryptonButton2.Anchor = AnchorStyles.None;
-            kryptonButton2.Location = new Point(36, 583);
+            kryptonButton2.Location = new Point(891, 620);
             kryptonButton2.Name = "kryptonButton2";
             kryptonButton2.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
             kryptonButton2.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
@@ -280,7 +281,7 @@ namespace Client.UserControls
             kryptonButton2.OverrideDefault.Border.Rounding = 20;
             kryptonButton2.OverrideDefault.Border.Width = 1;
             kryptonButton2.PaletteMode = PaletteMode.ProfessionalSystem;
-            kryptonButton2.Size = new Size(206, 43);
+            kryptonButton2.Size = new Size(180, 40);
             kryptonButton2.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
             kryptonButton2.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
             kryptonButton2.StateCommon.Back.ColorAngle = 45F;
@@ -309,11 +310,53 @@ namespace Client.UserControls
             kryptonButton2.Values.Text = "Create service report";
             kryptonButton2.Click += kryptonButton2_Click;
             // 
+            // btnDelete
+            // 
+            btnDelete.Anchor = AnchorStyles.None;
+            btnDelete.Location = new Point(430, 620);
+            btnDelete.Name = "btnDelete";
+            btnDelete.OverrideDefault.Back.Color1 = Color.FromArgb(210, 106, 8);
+            btnDelete.OverrideDefault.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnDelete.OverrideDefault.Back.ColorAngle = 45F;
+            btnDelete.OverrideDefault.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnDelete.OverrideDefault.Border.Rounding = 20;
+            btnDelete.OverrideDefault.Border.Width = 1;
+            btnDelete.PaletteMode = PaletteMode.ProfessionalSystem;
+            btnDelete.Size = new Size(170, 39);
+            btnDelete.StateCommon.Back.Color1 = Color.FromArgb(210, 106, 8);
+            btnDelete.StateCommon.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnDelete.StateCommon.Back.ColorAngle = 45F;
+            btnDelete.StateCommon.Border.Color1 = Color.FromArgb(210, 106, 8);
+            btnDelete.StateCommon.Border.Color2 = Color.FromArgb(210, 85, 2);
+            btnDelete.StateCommon.Border.ColorAngle = 45F;
+            btnDelete.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnDelete.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
+            btnDelete.StateCommon.Border.Rounding = 20;
+            btnDelete.StateCommon.Border.Width = 1;
+            btnDelete.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
+            btnDelete.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDelete.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
+            btnDelete.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
+            btnDelete.StatePressed.Back.ColorAngle = 45F;
+            btnDelete.StatePressed.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnDelete.StatePressed.Border.Rounding = 20;
+            btnDelete.StatePressed.Border.Width = 1;
+            btnDelete.StateTracking.Back.Color1 = Color.FromArgb(192, 64, 0);
+            btnDelete.StateTracking.Back.Color2 = Color.FromArgb(210, 85, 2);
+            btnDelete.StateTracking.Back.ColorAngle = 45F;
+            btnDelete.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            btnDelete.StateTracking.Border.Rounding = 20;
+            btnDelete.StateTracking.Border.Width = 1;
+            btnDelete.TabIndex = 45;
+            btnDelete.Values.Text = "Delete";
+            btnDelete.Click += btnDelete_Click;
+            // 
             // UCAllServices
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
+            Controls.Add(btnDelete);
             Controls.Add(kryptonButton2);
             Controls.Add(btnGraph);
             Controls.Add(lblJob);
@@ -343,5 +386,6 @@ namespace Client.UserControls
         public KryptonLabel lblJob;
         private KryptonButton btnGraph;
         private KryptonButton kryptonButton2;
+        private KryptonButton btnDelete;
     }
 }

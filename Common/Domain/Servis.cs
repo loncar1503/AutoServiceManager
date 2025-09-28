@@ -12,7 +12,6 @@ namespace Common.Domain
         public string OpisProblema { get; set; }
         public DateTime DatumPrijema { get; set; }
         public double UkupnaCena { get; set; }
-
         public int MajstorId { get; set; }
         public Majstor Majstor { get; set; }
 
@@ -21,6 +20,7 @@ namespace Common.Domain
 
         public List<StavkaServisa> Stavke { get; set; }
 
+        public List<StavkaServisa> StavkeZaBrisanje { get; set; }
 
     }
 }

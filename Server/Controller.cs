@@ -157,6 +157,10 @@ namespace Server
             so.ExecuteTemplate();
         }
 
-        
+        internal void DeleteService(Servis? s)
+        {
+            SystemOperationBase so = new DeleteServiceSO(s);
+            so.ExecuteTemplate();
+        }
     }
 }

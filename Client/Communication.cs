@@ -72,24 +72,44 @@ namespace Client
 
         private void VratiRezultat()
         {
-            Response odgovor = serializer.Receive<Response>();
-            if (odgovor.ExceptionMessage!=null)
+            try
             {
-                throw new SystemOperationException(odgovor.ExceptionMessage);
+
+
+                Response odgovor = serializer.Receive<Response>();
+                if (odgovor.ExceptionMessage != null)
+                {
+                    throw new SystemOperationException(odgovor.ExceptionMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
 
         private Rezultat VratiRezultat<Rezultat>() where Rezultat : class
         {
-            Response odgovor = serializer.Receive<Response>();
+            try
+            {
 
-            if (odgovor.Signal)
-            {
-                return JsonSerializer.Deserialize<Rezultat>((JsonElement)odgovor.Result);
+                Response odgovor = serializer.Receive<Response>();
+
+                if (odgovor.Signal)
+                {
+                    return JsonSerializer.Deserialize<Rezultat>((JsonElement)odgovor.Result);
+                }
+                else
+                {
+                    throw new SystemOperationException(odgovor.Result);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                throw new SystemOperationException(odgovor.Result);
+
+                throw
+                    ;
             }
         }
 
@@ -106,8 +126,8 @@ namespace Client
             }
             catch (IOException ex)
             {
-                //MessageBox.Show("PREKINUTA KOMUNIKACIJA!");
-                throw new ServerCommunicationException(ex.Message);
+                MessageBox.Show("PREKINUTA KOMUNIKACIJA!");
+                //throw new ServerCommunicationException(ex.Message);
             }
         }
     }

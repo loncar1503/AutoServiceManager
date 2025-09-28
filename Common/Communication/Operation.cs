@@ -29,6 +29,7 @@ namespace Common.Communication
         GetAllOwners,
         AddOwner,
         GetService,
-        GetVehicle
+        GetVehicle,
+        DeleteService
     }
 }

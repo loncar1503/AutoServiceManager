@@ -42,8 +42,16 @@ namespace Common.Communication
 
         public T Receive<T>()
         {
-            string json = reader.ReadLine();
-            return JsonSerializer.Deserialize<T>(json,Options);
+            try
+            {
+                string json = reader.ReadLine();
+                return JsonSerializer.Deserialize<T>(json, Options);
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
         public T ReadType<T>(object podaci) where T : class

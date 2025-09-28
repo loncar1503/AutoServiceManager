@@ -84,12 +84,13 @@ namespace Client.GuiController.VehicleController
                 {
                     Vozilo v = forma.dgvAllVehicles.SelectedRows[0].DataBoundItem as Vozilo;
                     Communication.Instance.PosaljiZahtevBezRezultata(Common.Communication.Operation.DeleteVehicle, v);
-                }
-                forma.dgvAllVehicles.Columns.Clear();
+                    forma.dgvAllVehicles.Columns.Clear();
 
-                SetupDGV();
-                MessageBox.Show("Vehicle successfully deleted", "Vehicle deleted! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+                    SetupDGV();
+                    MessageBox.Show("Vehicle successfully deleted", "Vehicle deleted! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
 
             }
             catch (ServerCommunicationException e)

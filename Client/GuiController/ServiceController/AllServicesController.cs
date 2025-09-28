@@ -235,5 +235,31 @@ namespace Client.GuiController.ServiceController
                 MessageBox.Show("Select a service to generate a report for");
             }
         }
+
+        internal void DeleteService()
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure that you want to delete this service?", "Deleting confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Servis s = forma.dgvAllServices.SelectedRows[0].DataBoundItem as Servis;
+                    Communication.Instance.PosaljiZahtevBezRezultata(Common.Communication.Operation.DeleteService, s);
+                    forma.dgvAllServices.Columns.Clear();
+
+                    SetupDGV();
+                    MessageBox.Show("Service successfully deleted", "Service deleted! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+
+            }
+           
+            catch (Exception es)
+            {
+                MessageBox.Show("Please select service that you want to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(es.Message);
+            }
+        }
     }
 }

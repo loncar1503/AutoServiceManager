@@ -8,6 +8,7 @@ namespace Common.Domain
 {
     public class StavkaServisa
     {
+        public int Id { get; set; }
         public int Rb { get; set; } // Redni broj stavke
         public double Cena { get; set; }
         public string Napomena { get; set; }

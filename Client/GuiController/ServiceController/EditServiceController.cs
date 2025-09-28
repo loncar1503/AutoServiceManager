@@ -74,11 +74,13 @@ namespace Client.GuiController.ServiceController
                 VoziloRegBroj = v.RegBroj,
                 Stavke = serviceItems.Select((st, i) => new StavkaServisa
                 {
-                    ServisId=service.Id,
-                    Rb = i + 1,                 // 1..n, VAŽNO zbog PK (ServisId,Rb)
-                    UslugaId = st.UslugaId,           // ne šalji Usluga objekat
-                    Cena = st.Cena,
+                    Id = st.Id,                 // VAŽNO: postojeće imaju Id>0; nove Id=0
+                    Rb = i + 1,                 // redni broj 1..n (server može i sam)
+                    UslugaId = st.UslugaId,     // za nove je potrebno; za stare server ignoriše izmene
+                    Cena = st.Cena,             // ako želiš da server prepiše i ovo za nove
                     Napomena = st.Napomena
+                    // NE šalji Usluga objekat:
+                    // Usluga = null
                 }).ToList()
             };
             serviceItems.Clear();
