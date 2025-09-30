@@ -117,18 +117,24 @@ namespace Client
 
             var reservations = new ToolStripMenuItem("Services")
             {
-                Image=
+                Image = Properties.Resources.menu1
             };
             reservations.DropDownItems.Add(new ToolStripMenuItem("All Services", null, OnAllReservations));
             reservations.DropDownItems.Add(new ToolStripMenuItem("Add Service", null, OnAddReservation));
             ConfigureDropDown(reservations);
 
-            var vehicles = new ToolStripMenuItem("Vehicles");
+            var vehicles = new ToolStripMenuItem("Vehicles")
+            {
+                Image = Properties.Resources.menu2
+            }; 
             vehicles.DropDownItems.Add(new ToolStripMenuItem("All Vehicles", null, OnAllVehicles));
             vehicles.DropDownItems.Add(new ToolStripMenuItem("Add Vehicles", null, OnAddVehicle));
             ConfigureDropDown(vehicles);
 
-            var licences = new ToolStripMenuItem("Licences");
+            var licences = new ToolStripMenuItem("Licences")
+            {
+                Image = Properties.Resources.menu3
+            };
             licences.DropDownItems.Add(new ToolStripMenuItem("Add Licence", null, OnAddLicence));
             ConfigureDropDown(licences);
 

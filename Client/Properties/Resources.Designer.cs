@@ -113,16 +113,6 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ChatGPT_Image_Sep_30__2025__04_55_30_PM {
-            get {
-                object obj = ResourceManager.GetObject("ChatGPT Image Sep 30, 2025, 04_55_30 PM", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Desktop___1__1_ {
             get {
                 object obj = ResourceManager.GetObject("Desktop - 1 (1)", resourceCulture);
@@ -146,6 +136,36 @@ namespace Client.Properties {
         internal static System.Drawing.Bitmap mechanicBck {
             get {
                 object obj = ResourceManager.GetObject("mechanicBck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu1 {
+            get {
+                object obj = ResourceManager.GetObject("menu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu2 {
+            get {
+                object obj = ResourceManager.GetObject("menu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu3 {
+            get {
+                object obj = ResourceManager.GetObject("menu3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -36,7 +36,8 @@ namespace Client
             kryptonButton1 = new KryptonButton();
             txtUsername = new KryptonTextBox();
             txtPassword = new KryptonTextBox();
-            kryptonLabel1 = new KryptonLabel();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -110,7 +111,7 @@ namespace Client
             kryptonButton1.StateCommon.Border.Rounding = 20;
             kryptonButton1.StateCommon.Border.Width = 1;
             kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonButton1.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
             kryptonButton1.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
             kryptonButton1.StatePressed.Back.ColorAngle = 45F;
@@ -160,15 +161,14 @@ namespace Client
             txtPassword.UseSystemPasswordChar = true;
             txtPassword.Enter += txtPassword_Enter;
             // 
-            // kryptonLabel1
+            // pictureBox1
             // 
-            kryptonLabel1.Location = new Point(244, 38);
-            kryptonLabel1.Name = "kryptonLabel1";
-            kryptonLabel1.Size = new Size(229, 53);
-            kryptonLabel1.StateCommon.ShortText.Color1 = Color.FromArgb(255, 128, 0);
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Poppins ExtraBold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            kryptonLabel1.TabIndex = 3;
-            kryptonLabel1.Values.Text = "Please login";
+            pictureBox1.Image = Properties.Resources._7934670;
+            pictureBox1.Location = new Point(264, 26);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(186, 80);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -176,7 +176,7 @@ namespace Client
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
             ClientSize = new Size(730, 376);
-            Controls.Add(kryptonLabel1);
+            Controls.Add(pictureBox1);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(kryptonButton1);
@@ -190,6 +190,7 @@ namespace Client
             StateCommon.Back.Color1 = Color.FromArgb(40, 40, 40);
             StateCommon.Back.Color2 = Color.Orange;
             TransparencyKey = Color.FromArgb(30, 30, 30);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,6 +200,6 @@ namespace Client
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
-        private KryptonLabel kryptonLabel1;
+        private PictureBox pictureBox1;
     }
 }
