@@ -1,6 +1,7 @@
 
 using Client.GuiController;
 using ComponentFactory.Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Client
 {

@@ -57,18 +57,16 @@ namespace Client.UserControls
             // 
             // cmbMehanicar
             // 
-            cmbMehanicar.AutoSize = false; 
             cmbMehanicar.Anchor = AnchorStyles.None;
             cmbMehanicar.DropDownWidth = 281;
             cmbMehanicar.Location = new Point(198, 105);
             cmbMehanicar.Name = "cmbMehanicar";
-            cmbMehanicar.Size = new Size(281, 50);
-            cmbMehanicar.StateCommon.ComboBox.Content.Padding= new Padding(5, 10, 5, 10);
-            cmbMehanicar.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
-
+            cmbMehanicar.Size = new Size(281, 40);
             cmbMehanicar.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbMehanicar.StateCommon.ComboBox.Border.Rounding = 20;
             cmbMehanicar.StateCommon.ComboBox.Border.Width = 1;
+            cmbMehanicar.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbMehanicar.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbMehanicar.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbMehanicar.StateCommon.Item.Border.Rounding = 20;
             cmbMehanicar.StateCommon.Item.Border.Width = 1;
@@ -80,12 +78,12 @@ namespace Client.UserControls
             cmbVozilo.DropDownWidth = 281;
             cmbVozilo.Location = new Point(198, 216);
             cmbVozilo.Name = "cmbVozilo";
-            cmbVozilo.Size = new Size(281, 50);
-            cmbVozilo.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbVozilo.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbVozilo.Size = new Size(281, 40);
             cmbVozilo.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbVozilo.StateCommon.ComboBox.Border.Rounding = 20;
             cmbVozilo.StateCommon.ComboBox.Border.Width = 1;
+            cmbVozilo.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbVozilo.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbVozilo.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbVozilo.StateCommon.Item.Border.Rounding = 20;
             cmbVozilo.StateCommon.Item.Border.Width = 1;
@@ -174,12 +172,12 @@ namespace Client.UserControls
             cmbUsluga.DropDownWidth = 281;
             cmbUsluga.Location = new Point(646, 141);
             cmbUsluga.Name = "cmbUsluga";
-            cmbUsluga.Size = new Size(281, 50);
-            cmbUsluga.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbUsluga.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbUsluga.Size = new Size(281, 40);
             cmbUsluga.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbUsluga.StateCommon.ComboBox.Border.Rounding = 20;
             cmbUsluga.StateCommon.ComboBox.Border.Width = 1;
+            cmbUsluga.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbUsluga.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbUsluga.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             cmbUsluga.StateCommon.Item.Border.Rounding = 20;
             cmbUsluga.StateCommon.Item.Border.Width = 1;
@@ -281,16 +279,14 @@ namespace Client.UserControls
             txtDescription.Anchor = AnchorStyles.None;
             txtDescription.Location = new Point(198, 464);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(308, 50);
+            txtDescription.Size = new Size(308, 53);
             txtDescription.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtDescription.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtDescription.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtDescription.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtDescription.StateCommon.Border.Rounding = 12;
             txtDescription.StateCommon.Border.Width = 1;
-           // txtDescription.StateCommon.Content.Color1 = Color.DimGray;
-            txtDescription.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
-
+            txtDescription.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtDescription.StateCommon.Content.Padding = new Padding(8, 10, 8, 10);
             txtDescription.TabIndex = 25;
             // 
@@ -392,15 +388,14 @@ namespace Client.UserControls
             txtNote.Anchor = AnchorStyles.None;
             txtNote.Location = new Point(646, 216);
             txtNote.Name = "txtNote";
-            txtNote.Size = new Size(308, 50);
+            txtNote.Size = new Size(308, 53);
             txtNote.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtNote.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtNote.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
             txtNote.StateCommon.Border.GraphicsHint = PaletteGraphicsHint.AntiAlias;
             txtNote.StateCommon.Border.Rounding = 12;
             txtNote.StateCommon.Border.Width = 1;
-            txtNote.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
-            //txtNote.StateCommon.Content.Color1 = Color.DimGray;
+            txtNote.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtNote.StateCommon.Content.Padding = new Padding(8, 10, 8, 10);
             txtNote.TabIndex = 29;
             // 

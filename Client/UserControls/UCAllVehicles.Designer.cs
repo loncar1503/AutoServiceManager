@@ -222,7 +222,6 @@ namespace Client.UserControls
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
-            BackgroundImage = Properties.Resources.mechanicBck;
             Controls.Add(kryptonButton2);
             Controls.Add(btnEdit);
             Controls.Add(kryptonButton1);

@@ -45,12 +45,12 @@
             cmbInstitution.DropDownWidth = 281;
             cmbInstitution.Location = new Point(403, 230);
             cmbInstitution.Name = "cmbInstitution";
-            cmbInstitution.Size = new Size(281, 50);
+            cmbInstitution.Size = new Size(281, 40);
             cmbInstitution.StateCommon.ComboBox.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             cmbInstitution.StateCommon.ComboBox.Border.Rounding = 20;
             cmbInstitution.StateCommon.ComboBox.Border.Width = 1;
+            cmbInstitution.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
             cmbInstitution.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbInstitution.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
             cmbInstitution.StateCommon.Item.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             cmbInstitution.StateCommon.Item.Border.Rounding = 20;
             cmbInstitution.StateCommon.Item.Border.Width = 1;
@@ -62,12 +62,12 @@
             cmbCategory.DropDownWidth = 281;
             cmbCategory.Location = new Point(403, 326);
             cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(281, 50);
-            cmbCategory.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbCategory.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            cmbCategory.Size = new Size(281, 40);
             cmbCategory.StateCommon.ComboBox.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             cmbCategory.StateCommon.ComboBox.Border.Rounding = 20;
             cmbCategory.StateCommon.ComboBox.Border.Width = 1;
+            cmbCategory.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbCategory.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
             cmbCategory.StateCommon.Item.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             cmbCategory.StateCommon.Item.Border.Rounding = 20;
             cmbCategory.StateCommon.Item.Border.Width = 1;
@@ -111,14 +111,14 @@
             txtName.Anchor = AnchorStyles.None;
             txtName.Location = new Point(403, 141);
             txtName.Name = "txtName";
-            txtName.Size = new Size(278, 35);
+            txtName.Size = new Size(278, 38);
             txtName.StateCommon.Back.Color1 = Color.WhiteSmoke;
             txtName.StateCommon.Border.Color1 = Color.WhiteSmoke;
             txtName.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             txtName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtName.StateCommon.Border.Rounding = 12;
             txtName.StateCommon.Border.Width = 1;
-            txtName.StateCommon.Content.Font = new Font("Poppins", 9.2f, FontStyle.Regular);
+            txtName.StateCommon.Content.Font = new Font("Poppins", 9.2F);
             txtName.TabIndex = 26;
             // 
             // kryptonButton1

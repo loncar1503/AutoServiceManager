@@ -38,13 +38,13 @@ namespace Client.UserControls
             cmbMarka = new KryptonComboBox();
             lblDate = new KryptonLabel();
             panel1 = new Panel();
-            cmbOwners = new KryptonComboBox();
             txtBrTel = new KryptonTextBox();
             txtPrezime = new KryptonTextBox();
             txtIme = new KryptonTextBox();
             kryptonLabel4 = new KryptonLabel();
             kryptonLabel3 = new KryptonLabel();
             kryptonLabel2 = new KryptonLabel();
+            cmbOwners = new KryptonComboBox();
             cmbModel = new KryptonComboBox();
             kryptonButton1 = new KryptonButton();
             btnCreateNewOwner = new KryptonButton();
@@ -165,23 +165,6 @@ namespace Client.UserControls
             panel1.TabIndex = 10;
             panel1.Paint += panel1_Paint;
             // 
-            // cmbOwners
-            // 
-            cmbOwners.Anchor = AnchorStyles.None;
-            cmbOwners.DropDownWidth = 281;
-            cmbOwners.Location = new Point(718, 208);
-            cmbOwners.Name = "cmbOwners";
-            cmbOwners.Size = new Size(353, 40);
-            cmbOwners.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            cmbOwners.StateCommon.ComboBox.Border.Rounding = 20;
-            cmbOwners.StateCommon.ComboBox.Border.Width = 1;
-            cmbOwners.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
-            cmbOwners.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
-            cmbOwners.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
-            cmbOwners.StateCommon.Item.Border.Rounding = 20;
-            cmbOwners.StateCommon.Item.Border.Width = 1;
-            cmbOwners.TabIndex = 29;
-            // 
             // txtBrTel
             // 
             txtBrTel.Anchor = AnchorStyles.None;
@@ -259,6 +242,23 @@ namespace Client.UserControls
             kryptonLabel2.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 12;
             kryptonLabel2.Values.Text = "Name:";
+            // 
+            // cmbOwners
+            // 
+            cmbOwners.Anchor = AnchorStyles.None;
+            cmbOwners.DropDownWidth = 281;
+            cmbOwners.Location = new Point(718, 208);
+            cmbOwners.Name = "cmbOwners";
+            cmbOwners.Size = new Size(353, 40);
+            cmbOwners.StateCommon.ComboBox.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            cmbOwners.StateCommon.ComboBox.Border.Rounding = 20;
+            cmbOwners.StateCommon.ComboBox.Border.Width = 1;
+            cmbOwners.StateCommon.ComboBox.Content.Font = new Font("Poppins", 9.2F);
+            cmbOwners.StateCommon.ComboBox.Content.Padding = new Padding(5, 10, 5, 10);
+            cmbOwners.StateCommon.Item.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            cmbOwners.StateCommon.Item.Border.Rounding = 20;
+            cmbOwners.StateCommon.Item.Border.Width = 1;
+            cmbOwners.TabIndex = 29;
             // 
             // cmbModel
             // 

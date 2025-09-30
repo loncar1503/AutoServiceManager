@@ -187,6 +187,7 @@ namespace Client.GuiController.ServiceController
                 forma.dgvUsluge.AllowUserToAddRows = false;
                 forma.dgvUsluge.AutoGenerateColumns = false;
                 forma.dgvUsluge.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                forma.dgvUsluge.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 forma.dgvUsluge.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 forma.dgvUsluge.Columns.Add(new DataGridViewTextBoxColumn { Name = "colJobName", HeaderText = "Job name", ReadOnly = true });
                 forma.dgvUsluge.Columns.Add(new DataGridViewTextBoxColumn

@@ -32,11 +32,8 @@ namespace Client
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             kryptonPalette1 = new KryptonPalette(components);
-            pnlMain = new KryptonPanel();
             menuStrip1 = new MenuStrip();
-            ((System.ComponentModel.ISupportInitialize)pnlMain).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -80,22 +77,6 @@ namespace Client
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonPadding = new Padding(-1, 8, 8, -1);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(20, -1, -1, -1);
             // 
-            // pnlMain
-            // 
-            pnlMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pnlMain.Location = new Point(0, 41);
-            pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(832, 437);
-            pnlMain.StateCommon.Color1 = Color.FromArgb(40, 40, 40);
-            pnlMain.StateCommon.Color2 = Color.FromArgb(255, 128, 0);
-            pnlMain.StateCommon.ColorAngle = 45F;
-            pnlMain.StateCommon.Image = (Image)resources.GetObject("pnlMain.StateCommon.Image");
-            pnlMain.StateCommon.ImageAlign = PaletteRectangleAlign.Local;
-            pnlMain.StateCommon.ImageStyle = PaletteImageStyle.Stretch;
-            pnlMain.StateNormal.Color1 = Color.FromArgb(40, 40, 40);
-            pnlMain.StateNormal.Color2 = Color.Orange;
-            pnlMain.TabIndex = 3;
-            // 
             // menuStrip1
             // 
             menuStrip1.Anchor = AnchorStyles.None;
@@ -104,7 +85,7 @@ namespace Client
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Location = new Point(27, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(202, 24);
+            menuStrip1.Size = new Size(158, 28);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -114,7 +95,6 @@ namespace Client
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
             ClientSize = new Size(844, 480);
-            Controls.Add(pnlMain);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             MainMenuStrip = menuStrip1;
@@ -126,7 +106,6 @@ namespace Client
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main page";
             WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)pnlMain).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,8 +113,6 @@ namespace Client
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-     
-        private KryptonPanel pnlMain;
         private MenuStrip menuStrip1;
     }
 }

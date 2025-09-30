@@ -19,15 +19,72 @@ namespace Client
     {
         private const int GAP = 32; 
         Majstor majstor;
+        //----------
+        private readonly BgHostPanel host = new();
+        private readonly UserControl Allvehicles = new UCAllVehicles();
+        private readonly UserControl Addvehicles = new UCAddVehicle();
+        private readonly UserControl Allservices = new UCAllServices();
+        private readonly UserControl Addservices = new UCAddService();
+        private readonly UserControl AddLicence;
+        private readonly UserControl landing = new UserControl(); // može i običan UC
 
+        private readonly Image landingImg = Properties.Resources.Desktop___1__1_;
+        private readonly Image appImg = Properties.Resources.Desktop___3__2_;
+        //-----------------
         public FrmMain(Majstor majstor)
         {
             InitializeComponent();
             this.majstor = majstor;
             this.Load += Form1_Load;
             this.Shown += (s, e) => CenterMenu(menuStrip1);
+            //-----------------------
+            AddLicence = new UCAddLicence(majstor);
+
+            host.Dock = DockStyle.Fill;
+            Controls.Add(host);
+
+            // Svi UC transparentni da bi se videla pozadina roditelja
+            PreparePage(landing);
+            PreparePage(Allservices);
+            PreparePage(Allvehicles);
+            PreparePage(Addservices);
+            PreparePage(Addvehicles);
+            PreparePage(AddLicence);
+
+            ShowLanding(); // startno stanje
+            //-------------------------
+        }
+        //----------------------------
+        private void PreparePage(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            uc.BackColor = Color.Transparent;
+            host.Controls.Add(uc);
+            uc.Visible = false;
         }
 
+        // Landing: samo druga pozadina + prikaz landing UC-a
+        public void ShowLanding()
+        {
+            host.SuspendLayout();
+            foreach (Control c in host.Controls) if (c is UserControl p) p.Visible = false;
+            host.SetBackground(landingImg);
+            landing.Visible = true;
+            landing.BringToFront();
+            host.ResumeLayout(true);
+        }
+
+        // App stranice: zajednička “app” pozadina + konkretna stranica
+        public void ShowPage(UserControl uc)
+        {
+            host.SuspendLayout();
+            foreach (Control c in host.Controls) if (c is UserControl p) p.Visible = false;
+            host.SetBackground(appImg);
+            uc.Visible = true;
+            uc.BringToFront();
+            host.ResumeLayout(true);
+        }
+        //-----------------------------
         private void Form1_Load(object sender, EventArgs e)
         {
             kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
@@ -48,16 +105,20 @@ namespace Client
             menu.Dock = DockStyle.Top;
             menu.BackColor = Color.FromArgb(40,40,40);
             menu.ForeColor = Color.Orange; // fallback
-            menu.Font = new Font("Poppins ExtraBold", 11.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);; // ako nema Poppins, koristiće fallback font
+            menu.Font = new Font("Segoe UI", 11.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);; // ako nema Poppins, koristiće fallback font
             menu.Renderer = new DarkMenuRenderer(Color.FromArgb(40, 40, 40), Color.Orange);
             menu.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             menu.Padding = new Padding(0);
             menu.Margin = new Padding(0);
-
+            menu.ImageScalingSize = new Size(22, 22);      // kolika će biti ikonica na meniju (auto-scale)
+            menu.ShowItemToolTips = false;
             // Očisti postojeće iteme (ako ih ima iz dizajnera)
             menu.Items.Clear();
 
-            var reservations = new ToolStripMenuItem("Services");
+            var reservations = new ToolStripMenuItem("Services")
+            {
+                Image=
+            };
             reservations.DropDownItems.Add(new ToolStripMenuItem("All Services", null, OnAllReservations));
             reservations.DropDownItems.Add(new ToolStripMenuItem("Add Service", null, OnAddReservation));
             ConfigureDropDown(reservations);
@@ -96,13 +157,13 @@ namespace Client
         }
         private void ApplyTopLevelSpacing(MenuStrip ms)
         {
-            const int PAD = 20; // koliki unutrašnji razmak oko teksta (povećaj/smanji po želji)
+            const int PAD = 28; // koliki unutrašnji razmak oko teksta (povećaj/smanji po želji)
 
             foreach (ToolStripItem it in ms.Items)
             {
                 it.AutoSize = true;             // dozvoli da širina prati padding
                 it.Margin = Padding.Empty;      // marginu zanemari
-                it.Padding = new Padding(PAD, 0, PAD, 0); // OVO pravi vidljiv razmak
+                it.Padding = new Padding(PAD, 2, PAD, 2); // OVO pravi vidljiv razmak
             }
         }
 
@@ -118,45 +179,51 @@ namespace Client
         }
 
         private void OnAllReservations(object s, EventArgs e) {
-            pnlMain.Controls.Clear();
-            UCAllServices uCAllServices = new UCAllServices()
-            {
-                Dock = DockStyle.Fill,
-            };
-            pnlMain.Controls.Add(uCAllServices);
+            ShowPage(Allservices);
+            //pnlMain.Controls.Clear();
+            //UCAllServices uCAllServices = new UCAllServices()
+            //{
+            //    Dock = DockStyle.Fill,
+            //};
+            //pnlMain.Controls.Add(uCAllServices);
         }
         private void OnAddReservation(object s, EventArgs e) {
-            pnlMain.Controls.Clear();
-            UCAddService ucAddService = new UCAddService()
-            {
-                Dock = DockStyle.Fill,
-            };
-            pnlMain.Controls.Add(ucAddService);
+            ShowPage(Addservices);
+            //pnlMain.Controls.Clear();
+            //UCAddService ucAddService = new UCAddService()
+            //{
+            //    Dock = DockStyle.Fill,
+            //};
+            //pnlMain.Controls.Add(ucAddService);
         }
-        private void OnAllVehicles(object s, EventArgs e) { 
-            pnlMain.Controls.Clear();
-            UCAllVehicles ucAllVehicles= new UCAllVehicles()
-            {
-                Dock=DockStyle.Fill,
-            };
-            pnlMain.Controls.Add(ucAllVehicles);
+        private void OnAllVehicles(object s, EventArgs e) {
+            ShowPage(Allvehicles);
+            //pnlMain.Controls.Clear();
+            //UCAllVehicles ucAllVehicles= new UCAllVehicles()
+            //{
+            //    Dock=DockStyle.Fill,
+            //};
+            //pnlMain.Controls.Add(ucAllVehicles);
 
         }
-        private void OnAddVehicle(object s, EventArgs e) { 
-            pnlMain.Controls.Clear();
-            UCAddVehicle ucAddVehicle= new UCAddVehicle()
-            {
-                Dock = DockStyle.Fill,
-            };
-            pnlMain.Controls.Add(ucAddVehicle);
+        private void OnAddVehicle(object s, EventArgs e) {
+            ShowPage(Addvehicles);
+            //pnlMain.Controls.Clear();
+            //UCAddVehicle ucAddVehicle= new UCAddVehicle()
+            //{
+            //    Dock = DockStyle.Fill,
+            //};
+            //pnlMain.Controls.Add(ucAddVehicle);
         }
         private void OnAddLicence(object s, EventArgs e) {
-            pnlMain.Controls.Clear();
-            UCAddLicence uCAddLicence = new UCAddLicence(majstor)
-            {
-                Dock = DockStyle.Fill,
-            };
-            pnlMain.Controls.Add(uCAddLicence);
+            ShowPage(AddLicence);
+
+            //pnlMain.Controls.Clear();
+            //UCAddLicence uCAddLicence = new UCAddLicence(majstor)
+            //{
+            //    Dock = DockStyle.Fill,
+            //};
+            //pnlMain.Controls.Add(uCAddLicence);
         }
 
         private sealed class DarkMenuRenderer : ToolStripProfessionalRenderer
@@ -203,6 +270,7 @@ namespace Client
                 // bez bordera
             }
 
+            
             private sealed class DarkColorTable : ProfessionalColorTable
             {
                 private readonly Color bg;
@@ -222,197 +290,240 @@ namespace Client
             }
         }
     }
+    public class BgHostPanel : Panel
+    {
+        public Image? BackgroundSource { get; set; }
+        private Image? _scaled;
+
+        public BgHostPanel()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint |
+                     ControlStyles.UserPaint |
+                     ControlStyles.OptimizedDoubleBuffer, true);
+            Resize += (_, __) => Rebuild();
+        }
+
+        public void SetBackground(Image img)
+        {
+            BackgroundSource = img;
+            Rebuild();
+        }
+
+        private void Rebuild()
+        {
+            _scaled?.Dispose();
+            if (BackgroundSource == null || ClientSize.Width == 0) { Invalidate(); return; }
+            var bmp = new Bitmap(ClientSize.Width, ClientSize.Height);
+            using var g = Graphics.FromImage(bmp);
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            g.DrawImage(BackgroundSource, new Rectangle(Point.Empty, ClientSize));
+            _scaled = bmp;
+            Invalidate();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            if (_scaled != null) e.Graphics.DrawImage(_scaled, ClientRectangle);
+            else e.Graphics.FillRectangle(Brushes.Black, ClientRectangle);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing) _scaled?.Dispose();
+            base.Dispose(disposing);
+        }
+    }
 
 
-        #region newerOldForm
-        //public FrmMain()
-        //{
-        //    InitializeComponent();
-        //    Load += FrmMain_Load;
-        //}
+    #region newerOldForm
+    //public FrmMain()
+    //{
+    //    InitializeComponent();
+    //    Load += FrmMain_Load;
+    //}
 
-        //// ---------- PUBLIC UI ACTIONS (prazne za sada) ----------
-        //private void CreateReservation() { MessageBox.Show("Create reservation"); }
-        //private void SearchReservation() { MessageBox.Show("Search reservation"); }
-        //private void EditReservation() { MessageBox.Show("Edit reservation"); }
-        //private void CreateVehicle() { MessageBox.Show("Create vehicle"); }
-        //private void SearchVehicle() { MessageBox.Show("Search vehicle"); }
-        //private void DeleteVehicle() { MessageBox.Show("Delete vehicle"); }
+    //// ---------- PUBLIC UI ACTIONS (prazne za sada) ----------
+    //private void CreateReservation() { MessageBox.Show("Create reservation"); }
+    //private void SearchReservation() { MessageBox.Show("Search reservation"); }
+    //private void EditReservation() { MessageBox.Show("Edit reservation"); }
+    //private void CreateVehicle() { MessageBox.Show("Create vehicle"); }
+    //private void SearchVehicle() { MessageBox.Show("Search vehicle"); }
+    //private void DeleteVehicle() { MessageBox.Show("Delete vehicle"); }
 
-        //// ---------- LOAD ----------
-        //private void FrmMain_Load(object sender, EventArgs e)
-        //{
-        //    // 1) Fullscreen
-        //    WindowState = FormWindowState.Maximized;
+    //// ---------- LOAD ----------
+    //private void FrmMain_Load(object sender, EventArgs e)
+    //{
+    //    // 1) Fullscreen
+    //    WindowState = FormWindowState.Maximized;
 
-        //    // 2) Ikonice prozora (čitati iz foldera aplikacije)
-        //    try
-        //    {
-        //        kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
-        //        kryptonPalette1.ButtonSpecs.FormMax.Image = Image.FromFile("Images/maximize.png");
-        //        kryptonPalette1.ButtonSpecs.FormMin.Image = Image.FromFile("Images/minimize.png");
-        //        kryptonPalette1.ButtonSpecs.FormClose.Image = Image.FromFile("Images/exit.png");
-        //    }
-        //    catch { /* ignorisi ako fali fajl */ }
+    //    // 2) Ikonice prozora (čitati iz foldera aplikacije)
+    //    try
+    //    {
+    //        kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
+    //        kryptonPalette1.ButtonSpecs.FormMax.Image = Image.FromFile("Images/maximize.png");
+    //        kryptonPalette1.ButtonSpecs.FormMin.Image = Image.FromFile("Images/minimize.png");
+    //        kryptonPalette1.ButtonSpecs.FormClose.Image = Image.FromFile("Images/exit.png");
+    //    }
+    //    catch { /* ignorisi ako fali fajl */ }
 
-        //    // 3) MenuStrip – dock i dimenzije
-        //    menuStrip1.Dock = DockStyle.Top;
-        //    menuStrip1.AutoSize = false;
-        //    menuStrip1.Stretch = true;
-        //    menuStrip1.Height = 44;
+    //    // 3) MenuStrip – dock i dimenzije
+    //    menuStrip1.Dock = DockStyle.Top;
+    //    menuStrip1.AutoSize = false;
+    //    menuStrip1.Stretch = true;
+    //    menuStrip1.Height = 44;
 
-        //    // 4) Boje i font
-        //    var poppins = SafeFont("Poppins", 10f, FontStyle.Regular);
-        //    menuStrip1.Font = poppins;
-        //    menuStrip1.RenderMode = ToolStripRenderMode.Professional; // da prihvati boje na itemima
-        //    menuStrip1.BackColor = Color.Orange;
-        //    menuStrip1.ForeColor = Color.White;
+    //    // 4) Boje i font
+    //    var poppins = SafeFont("Poppins", 10f, FontStyle.Regular);
+    //    menuStrip1.Font = poppins;
+    //    menuStrip1.RenderMode = ToolStripRenderMode.Professional; // da prihvati boje na itemima
+    //    menuStrip1.BackColor = Color.Orange;
+    //    menuStrip1.ForeColor = Color.White;
 
-        //    // 5) Napravi klikabilne “dugmiće”
-        //    menuStrip1.Items.Clear();
-        //    menuStrip1.Items.AddRange(new ToolStripMenuItem[]
-        //    {
-        //        Btn("Create reservation",   (s,e)=>CreateReservation(), poppins),
-        //        Btn("Search for reservation",(s,e)=>SearchReservation(), poppins),
-        //        Btn("Edit reservation",     (s,e)=>EditReservation(), poppins),
-        //        Btn("Vehicles",             (s,e)=>CreateVehicle(), poppins),
-        //        Btn("Search for vehicle",   (s,e)=>SearchVehicle(), poppins),
-        //        Btn("Delete vehicle",       (s,e)=>DeleteVehicle(), poppins)
-        //    });
+    //    // 5) Napravi klikabilne “dugmiće”
+    //    menuStrip1.Items.Clear();
+    //    menuStrip1.Items.AddRange(new ToolStripMenuItem[]
+    //    {
+    //        Btn("Create reservation",   (s,e)=>CreateReservation(), poppins),
+    //        Btn("Search for reservation",(s,e)=>SearchReservation(), poppins),
+    //        Btn("Edit reservation",     (s,e)=>EditReservation(), poppins),
+    //        Btn("Vehicles",             (s,e)=>CreateVehicle(), poppins),
+    //        Btn("Search for vehicle",   (s,e)=>SearchVehicle(), poppins),
+    //        Btn("Delete vehicle",       (s,e)=>DeleteVehicle(), poppins)
+    //    });
 
-        //    // 6) Centriranje stavki (i održavanje pri resize/layout)
-        //    menuStrip1.Layout += (s, ev) => CenterMenu();
-        //    menuStrip1.SizeChanged += (s, ev) => { RoundMenuStrip(menuStrip1, 8); CenterMenu(); };
-        //    this.Resize += (s, ev) => CenterMenu();
+    //    // 6) Centriranje stavki (i održavanje pri resize/layout)
+    //    menuStrip1.Layout += (s, ev) => CenterMenu();
+    //    menuStrip1.SizeChanged += (s, ev) => { RoundMenuStrip(menuStrip1, 8); CenterMenu(); };
+    //    this.Resize += (s, ev) => CenterMenu();
 
-        //    // odloži prvi layout da širine itema budu tačne
-        //    BeginInvoke((MethodInvoker)(() => { RoundMenuStrip(menuStrip1, 8); CenterMenu(); }));
-        //}
+    //    // odloži prvi layout da širine itema budu tačne
+    //    BeginInvoke((MethodInvoker)(() => { RoundMenuStrip(menuStrip1, 8); CenterMenu(); }));
+    //}
 
-        //// ---------- POMOĆNI KREATOR STAVKI (izgled kao dugme) ----------
-        //private ToolStripMenuItem Btn(string text, EventHandler onClick, Font f)
-        //{
-        //    var it = new ToolStripMenuItem(text);
-        //    it.Font = f;
-        //    it.ForeColor = Color.White;
-        //    it.BackColor = Color.Orange;          // radi uz Professional renderer
-        //    it.AutoSize = true;
-        //    it.Margin = Padding.Empty;
-        //    it.Padding = new Padding(14, 10, 14, 10); // “dugme” look
-        //    it.Click += onClick;
-        //    return it;
-        //}
+    //// ---------- POMOĆNI KREATOR STAVKI (izgled kao dugme) ----------
+    //private ToolStripMenuItem Btn(string text, EventHandler onClick, Font f)
+    //{
+    //    var it = new ToolStripMenuItem(text);
+    //    it.Font = f;
+    //    it.ForeColor = Color.White;
+    //    it.BackColor = Color.Orange;          // radi uz Professional renderer
+    //    it.AutoSize = true;
+    //    it.Margin = Padding.Empty;
+    //    it.Padding = new Padding(14, 10, 14, 10); // “dugme” look
+    //    it.Click += onClick;
+    //    return it;
+    //}
 
-        //// ---------- CENTRIRANJE ----------
-        //private void CenterMenu()
-        //{
-        //    if (menuStrip1.Items.Count == 0) return;
+    //// ---------- CENTRIRANJE ----------
+    //private void CenterMenu()
+    //{
+    //    if (menuStrip1.Items.Count == 0) return;
 
-        //    int total = menuStrip1.Items.Cast<ToolStripItem>()
-        //                 .Sum(i => i.Width + i.Margin.Horizontal);
+    //    int total = menuStrip1.Items.Cast<ToolStripItem>()
+    //                 .Sum(i => i.Width + i.Margin.Horizontal);
 
-        //    int lr = Math.Max(0, (menuStrip1.Width - total) / 2);
-        //    menuStrip1.Padding = new Padding(lr, 0, lr, 0);
-        //}
+    //    int lr = Math.Max(0, (menuStrip1.Width - total) / 2);
+    //    menuStrip1.Padding = new Padding(lr, 0, lr, 0);
+    //}
 
-        //// ---------- ZAOBLJENI UGLovi ----------
-        //private void RoundMenuStrip(MenuStrip menu, int radius)
-        //{
-        //    if (menu.Width <= 0 || menu.Height <= 0) return;
+    //// ---------- ZAOBLJENI UGLovi ----------
+    //private void RoundMenuStrip(MenuStrip menu, int radius)
+    //{
+    //    if (menu.Width <= 0 || menu.Height <= 0) return;
 
-        //    using var path = new GraphicsPath();
-        //    int d = radius * 2;
-        //    var r = new Rectangle(0, 0, menu.Width, menu.Height);
+    //    using var path = new GraphicsPath();
+    //    int d = radius * 2;
+    //    var r = new Rectangle(0, 0, menu.Width, menu.Height);
 
-        //    path.AddArc(r.X, r.Y, d, d, 180, 90);
-        //    path.AddArc(r.Right - d, r.Y, d, d, 270, 90);
-        //    path.AddArc(r.Right - d, r.Bottom - d, d, d, 0, 90);
-        //    path.AddArc(r.X, r.Bottom - d, d, d, 90, 90);
-        //    path.CloseFigure();
+    //    path.AddArc(r.X, r.Y, d, d, 180, 90);
+    //    path.AddArc(r.Right - d, r.Y, d, d, 270, 90);
+    //    path.AddArc(r.Right - d, r.Bottom - d, d, d, 0, 90);
+    //    path.AddArc(r.X, r.Bottom - d, d, d, 90, 90);
+    //    path.CloseFigure();
 
-        //    menu.Region = new Region(path);
-        //}
+    //    menu.Region = new Region(path);
+    //}
 
-        //// ---------- FONT FALLBACK ----------
-        //private static Font SafeFont(string family, float size, FontStyle style)
-        //{
-        //    try { return new Font(family, size, style); }
-        //    catch { return new Font("Segoe UI", size, style); }
-        //}
-        #endregion
-        #region oldForm
+    //// ---------- FONT FALLBACK ----------
+    //private static Font SafeFont(string family, float size, FontStyle style)
+    //{
+    //    try { return new Font(family, size, style); }
+    //    catch { return new Font("Segoe UI", size, style); }
+    //}
+    #endregion
+    #region oldForm
 
-        //public FrmMain()
-        //{
-        //    InitializeComponent();
-        //    this.Load += Form1_Load;
+    //public FrmMain()
+    //{
+    //    InitializeComponent();
+    //    this.Load += Form1_Load;
 
-        //}
-
-
+    //}
 
 
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-        //    this.WindowState = FormWindowState.Maximized;
-        //    RoundMenuStrip(menuStrip1, 8);
-        //    menuStrip1.Dock = DockStyle.Top;
-        //    menuStrip1.Stretch = true;
-        //    kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
-        //    kryptonPalette1.ButtonSpecs.FormMax.Image = Image.FromFile("Images/maximize.png");
-        //    kryptonPalette1.ButtonSpecs.FormMin.Image = Image.FromFile("Images/minimize.png");
-        //    kryptonPalette1.ButtonSpecs.FormClose.Image = Image.FromFile("Images/exit.png");
-        //    menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-        //    // Stavke
-        //    menuStrip1.Items.Clear();
-        //    menuStrip1.Items.Add("Create reservation");
-        //    menuStrip1.Items.Add("Search for reservation");
-        //    menuStrip1.Items.Add("Edit reservation");
-        //    menuStrip1.Items.Add("Vehicles");
-        //    menuStrip1.Items.Add("Search for vehicle");
-        //    menuStrip1.Items.Add("Delete vehicle");
-
-        //    // Osnovni izgled
-        //    menuStrip1.Font = new Font("Poppins", 10, FontStyle.Regular);
-        //    menuStrip1.BackColor = Color.Orange;
-        //    menuStrip1.ForeColor = Color.White;
-        //    menuStrip1.AutoSize = false;
-        //    menuStrip1.Height = 40;
 
 
-        //    // Krypton ponekad ignoriše ForeColor na itemima → primeni na svakoj stavci
-        //    foreach (ToolStripMenuItem item in menuStrip1.Items)
-        //    {
-        //        item.ForeColor = Color.White;
-        //    }
+    //private void Form1_Load(object sender, EventArgs e)
+    //{
+    //    this.WindowState = FormWindowState.Maximized;
+    //    RoundMenuStrip(menuStrip1, 8);
+    //    menuStrip1.Dock = DockStyle.Top;
+    //    menuStrip1.Stretch = true;
+    //    kryptonPalette1.ButtonSpecs.FormRestore.Image = Image.FromFile("Images/maximize.png");
+    //    kryptonPalette1.ButtonSpecs.FormMax.Image = Image.FromFile("Images/maximize.png");
+    //    kryptonPalette1.ButtonSpecs.FormMin.Image = Image.FromFile("Images/minimize.png");
+    //    kryptonPalette1.ButtonSpecs.FormClose.Image = Image.FromFile("Images/exit.png");
+    //    menuStrip1.RenderMode = ToolStripRenderMode.Professional;
+    //    // Stavke
+    //    menuStrip1.Items.Clear();
+    //    menuStrip1.Items.Add("Create reservation");
+    //    menuStrip1.Items.Add("Search for reservation");
+    //    menuStrip1.Items.Add("Edit reservation");
+    //    menuStrip1.Items.Add("Vehicles");
+    //    menuStrip1.Items.Add("Search for vehicle");
+    //    menuStrip1.Items.Add("Delete vehicle");
 
-        //    // Centriranje stavki
-        //    menuStrip1.Layout += (s, ev) =>
-        //    {
-        //        int totalItemWidth = menuStrip1.Items.Cast<ToolStripItem>().Sum(i => (int)i.Width);
-        //        menuStrip1.Padding = new Padding((menuStrip1.Width - totalItemWidth) / 2, 0, 0, 0);
-        //    };
-        //}
+    //    // Osnovni izgled
+    //    menuStrip1.Font = new Font("Poppins", 10, FontStyle.Regular);
+    //    menuStrip1.BackColor = Color.Orange;
+    //    menuStrip1.ForeColor = Color.White;
+    //    menuStrip1.AutoSize = false;
+    //    menuStrip1.Height = 40;
 
-        //private void RoundMenuStrip(MenuStrip menu, int radius)
-        //{
-        //    GraphicsPath path = new GraphicsPath();
-        //    int arcDiameter = radius * 2;
-        //    Rectangle bounds = new Rectangle(0, 0, menu.Width, menu.Height);
 
-        //    // Gornji levi
-        //    path.AddArc(bounds.X, bounds.Y, arcDiameter, arcDiameter, 180, 90);
-        //    // Gornji desni
-        //    path.AddArc(bounds.Right - arcDiameter, bounds.Y, arcDiameter, arcDiameter, 270, 90);
-        //    // Donji desni
-        //    path.AddArc(bounds.Right - arcDiameter, bounds.Bottom - arcDiameter, arcDiameter, arcDiameter, 0, 90);
-        //    // Donji levi
-        //    path.AddArc(bounds.X, bounds.Bottom - arcDiameter, arcDiameter, arcDiameter, 90, 90);
-        //    path.CloseFigure();
+    //    // Krypton ponekad ignoriše ForeColor na itemima → primeni na svakoj stavci
+    //    foreach (ToolStripMenuItem item in menuStrip1.Items)
+    //    {
+    //        item.ForeColor = Color.White;
+    //    }
 
-        //    menu.Region = new Region(path);
-        //}
-        #endregion
+    //    // Centriranje stavki
+    //    menuStrip1.Layout += (s, ev) =>
+    //    {
+    //        int totalItemWidth = menuStrip1.Items.Cast<ToolStripItem>().Sum(i => (int)i.Width);
+    //        menuStrip1.Padding = new Padding((menuStrip1.Width - totalItemWidth) / 2, 0, 0, 0);
+    //    };
+    //}
+
+    //private void RoundMenuStrip(MenuStrip menu, int radius)
+    //{
+    //    GraphicsPath path = new GraphicsPath();
+    //    int arcDiameter = radius * 2;
+    //    Rectangle bounds = new Rectangle(0, 0, menu.Width, menu.Height);
+
+    //    // Gornji levi
+    //    path.AddArc(bounds.X, bounds.Y, arcDiameter, arcDiameter, 180, 90);
+    //    // Gornji desni
+    //    path.AddArc(bounds.Right - arcDiameter, bounds.Y, arcDiameter, arcDiameter, 270, 90);
+    //    // Donji desni
+    //    path.AddArc(bounds.Right - arcDiameter, bounds.Bottom - arcDiameter, arcDiameter, arcDiameter, 0, 90);
+    //    // Donji levi
+    //    path.AddArc(bounds.X, bounds.Bottom - arcDiameter, arcDiameter, arcDiameter, 90, 90);
+    //    path.CloseFigure();
+
+    //    menu.Region = new Region(path);
+    //}
+    #endregion
 
 }
 
