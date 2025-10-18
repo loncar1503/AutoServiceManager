@@ -111,7 +111,7 @@ namespace Client
             kryptonButton1.StateCommon.Border.Rounding = 20;
             kryptonButton1.StateCommon.Border.Width = 1;
             kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.WhiteSmoke;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonButton1.StatePressed.Back.Color1 = Color.FromArgb(166, 98, 4);
             kryptonButton1.StatePressed.Back.Color2 = Color.FromArgb(87, 51, 2);
             kryptonButton1.StatePressed.Back.ColorAngle = 45F;

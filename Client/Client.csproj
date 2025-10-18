@@ -10,13 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\bckChatgpt.png" />
+    <None Remove="Images\bckGoogle.jpg" />
     <None Remove="Images\exit.png" />
     <None Remove="Images\maximize.png" />
     <None Remove="Images\minimize.png" />
+    <None Remove="Resources\bckChatgpt.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="autoservis_icon.ico" />
+    <Content Include="Images\bckChatgpt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bckGoogle.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\exit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -26,6 +35,7 @@
     <Content Include="Images\minimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\bckChatgpt.png" />
   </ItemGroup>
 
   <ItemGroup>

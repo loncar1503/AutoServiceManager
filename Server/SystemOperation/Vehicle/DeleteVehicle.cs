@@ -11,13 +11,9 @@ namespace Server.SystemOperation.Vehicle
     internal class DeleteVehicle :SystemOperationBase
     {
         public Vozilo vehicle;
-       // private readonly AppDbContext context;
-
         public DeleteVehicle(Vozilo vehicle)
         {
             this.vehicle = vehicle;
-            //context = new AppDbContext();
-
         }
 
         protected override void ExecuteConcreteOperation()

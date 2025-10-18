@@ -10,12 +10,6 @@ namespace Server.SystemOperation.Service
 {
     internal class GetAllJobsSO: SystemOperationBase
     {
-       // private readonly AppDbContext context;
-
-        public GetAllJobsSO()
-        {
-            //context = new AppDbContext();
-        }
         public List<Usluga> Result { get; set; }
         protected override void ExecuteConcreteOperation()
         {

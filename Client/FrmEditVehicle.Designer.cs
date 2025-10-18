@@ -164,7 +164,7 @@ namespace Client
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(175, 24);
             lblDate.StateCommon.ShortText.Color1 = Color.Orange;
-            lblDate.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDate.TabIndex = 20;
             lblDate.Values.Text = "Year of production:";
             // 
@@ -193,7 +193,7 @@ namespace Client
             lblModel.Name = "lblModel";
             lblModel.Size = new Size(69, 24);
             lblModel.StateCommon.ShortText.Color1 = Color.Orange;
-            lblModel.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblModel.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblModel.TabIndex = 18;
             lblModel.Values.Text = "Model:";
             // 
@@ -204,18 +204,18 @@ namespace Client
             lblBrand.Name = "lblBrand";
             lblBrand.Size = new Size(70, 24);
             lblBrand.StateCommon.ShortText.Color1 = Color.Orange;
-            lblBrand.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBrand.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBrand.TabIndex = 17;
             lblBrand.Values.Text = "Brand:";
             // 
             // lblRN
             // 
             lblRN.Anchor = AnchorStyles.None;
-            lblRN.Location = new Point(88, 123);
+            lblRN.Location = new Point(98, 123);
             lblRN.Name = "lblRN";
             lblRN.Size = new Size(192, 24);
             lblRN.StateCommon.ShortText.Color1 = Color.Orange;
-            lblRN.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRN.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRN.TabIndex = 16;
             lblRN.Values.Text = "Registration number:";
             // 
@@ -264,7 +264,7 @@ namespace Client
             btnChooseOwner.StateCommon.Back.Draw = InheritBool.False;
             btnChooseOwner.StateCommon.Border.DrawBorders = PaletteDrawBorders.None;
             btnChooseOwner.StateCommon.Content.ShortText.Color1 = Color.Orange;
-            btnChooseOwner.StateCommon.Content.ShortText.Font = new Font("Arial Rounded MT Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnChooseOwner.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnChooseOwner.StatePressed.Content.ShortText.Color1 = Color.White;
             btnChooseOwner.TabIndex = 32;
             btnChooseOwner.Values.Text = "Choose from previous";
@@ -285,7 +285,7 @@ namespace Client
             btnCreateNewOwner.StateCommon.Back.Draw = InheritBool.False;
             btnCreateNewOwner.StateCommon.Border.DrawBorders = PaletteDrawBorders.None;
             btnCreateNewOwner.StateCommon.Content.ShortText.Color1 = Color.Orange;
-            btnCreateNewOwner.StateCommon.Content.ShortText.Font = new Font("Arial Rounded MT Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCreateNewOwner.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCreateNewOwner.StatePressed.Content.ShortText.Color1 = Color.White;
             btnCreateNewOwner.TabIndex = 31;
             btnCreateNewOwner.Values.Text = "Create new owner";
@@ -360,7 +360,7 @@ namespace Client
             kryptonLabel2.Name = "kryptonLabel2";
             kryptonLabel2.Size = new Size(60, 22);
             kryptonLabel2.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel2.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel2.StateCommon.ShortText.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 12;
             kryptonLabel2.Values.Text = "Name:";
             // 
@@ -371,7 +371,7 @@ namespace Client
             kryptonLabel3.Name = "kryptonLabel3";
             kryptonLabel3.Size = new Size(126, 22);
             kryptonLabel3.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel3.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel3.StateCommon.ShortText.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel3.TabIndex = 13;
             kryptonLabel3.Values.Text = "Phone number:";
             // 
@@ -382,7 +382,7 @@ namespace Client
             kryptonLabel4.Name = "kryptonLabel4";
             kryptonLabel4.Size = new Size(84, 22);
             kryptonLabel4.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel4.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel4.StateCommon.ShortText.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel4.TabIndex = 14;
             kryptonLabel4.Values.Text = "Surname:";
             // 

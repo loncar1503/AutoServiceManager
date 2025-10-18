@@ -11,9 +11,7 @@ namespace Common.Domain
     {
         public int Id { get; set; }
         public string Naziv { get; set; }
-
         public List<ModelVozila> Modeli { get; set; } = new();
-
         public override string ToString()
         {
             return Naziv;

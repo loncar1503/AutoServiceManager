@@ -13,9 +13,6 @@ namespace Common.Domain
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string BrojTelefona { get; set; }
-
-        //public List<Vozilo> Vozila { get; set; }
-
         public List<Vozilo> Vozila { get; set; } = new();
         public override string ToString()
         {

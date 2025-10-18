@@ -85,7 +85,7 @@ namespace Client
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Location = new Point(27, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(158, 28);
+            menuStrip1.Size = new Size(202, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -104,7 +104,6 @@ namespace Client
             PaletteMode = PaletteMode.Custom;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Main page";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();

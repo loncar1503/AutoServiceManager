@@ -12,10 +12,6 @@ namespace Common.Domain
         public string Naziv { get; set; }
         public string Institucija { get; set; }
         public string Kategorija { get; set; }
-        
-
         public List<MajstorLicenca> MajstorLicenca { get; set; }
-
-
     }
 }

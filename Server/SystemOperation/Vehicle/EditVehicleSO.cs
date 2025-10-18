@@ -14,14 +14,9 @@ namespace Server.SystemOperation.Vehicle
     {
         public Vozilo Result { get; set; }
         public Vozilo vehicle;
-       // private readonly AppDbContext context;
-
-
         public EditVehicleSO(Vozilo vozilo)
         {
             this.vehicle = vozilo;
-           // context = new AppDbContext();
-
         }
         protected override void ExecuteConcreteOperation()
         {

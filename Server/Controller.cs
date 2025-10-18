@@ -17,8 +17,6 @@ namespace Server
 {
     public class Controller
     {
-       // private Broker broker;
-
         private static Controller instance;
         public static Controller Instance
         {
@@ -35,24 +33,19 @@ namespace Server
             SystemOperationBase so = new LoginSO(m);
             so.ExecuteTemplate();
             return ((LoginSO)so).Result;
-
         }
-
         public List<Marka> GetAllBrands()
         {
             SystemOperationBase so= new GetAllBrandsSO();
             so.ExecuteTemplate();
             return ((GetAllBrandsSO)so).Result;
         }
-
         internal object GetAllModels()
         {
             SystemOperationBase so= new GetAllModelsSO();
             so.ExecuteTemplate();
             return ((GetAllModelsSO)so).Result;
-        }
-
-        
+        }              
         internal object GetAllVehicles()
         {
             SystemOperationBase so = new GetAllVehiclesSO();
@@ -111,25 +104,18 @@ namespace Server
         }
         internal void AddVehicle(Vozilo? v)
         {
-            //SystemOperationBaseSQL so = new AddVehicleSQLSO();
-            //so.IzvrsiSO(v);
             SystemOperationBase so = new AddVehicleSO(v);
             so.ExecuteTemplate();
-
         }
 
         internal void AddOwner(Klijent? k)
         {
-            //SystemOperationBaseSQL so = new AddOwnerSQLSO();
-            //so.IzvrsiSO(k);
             SystemOperationBase so = new AddOwnerSO(k);
             so.ExecuteTemplate();
             
         }
         internal void AddService(Servis? s)
         {
-            //SystemOperationBaseSQL so = new AddServiceSQLSO();
-            //so.IzvrsiSO(s);
             SystemOperationBase so = new AddServiceSO(s);
             so.ExecuteTemplate();
         }

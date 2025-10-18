@@ -12,8 +12,6 @@ namespace Server.SystemOperation.Service
     internal class EditServiceSO: SystemOperationBase
     {
         public Servis servis;
-        
-
         public EditServiceSO(Servis servis)
         {
             this.servis = servis;

@@ -182,3 +182,5 @@ D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\b
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\bin\Debug\net8.0-windows\Images\bckGoogle.jpg
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Client\bin\Debug\net8.0-windows\Images\bckChatgpt.png

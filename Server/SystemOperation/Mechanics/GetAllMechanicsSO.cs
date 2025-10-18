@@ -11,7 +11,6 @@ namespace Server.SystemOperation.Mechanics
     internal class GetAllMechanicsSO: SystemOperationBase
     {
         public List<Majstor> Result { get; set; }
-
         public GetAllMechanicsSO()
         {
 

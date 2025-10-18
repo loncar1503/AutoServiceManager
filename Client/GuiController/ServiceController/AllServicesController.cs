@@ -161,7 +161,6 @@ namespace Client.GuiController.ServiceController
 
                 forma.dgvAllServices.DataSource = allServices;
 
-
               
             }
             catch (ServerCommunicationException ex)

@@ -13,13 +13,9 @@ namespace Server.SystemOperation.Vehicle
     {
         public Vozilo Result {  get; set; }
         public Vozilo vehicle;
-       // private readonly AppDbContext context;
-
-
         public AddVehicleSO(Vozilo vozilo)
         {
             this.vehicle = vozilo;
-           // context = new AppDbContext();
         }
         protected override void ExecuteConcreteOperation()
         {
@@ -37,8 +33,7 @@ namespace Server.SystemOperation.Vehicle
                 vozilo.Klijent = null; // da EF ne pokusa ponovo insert
             }
                 context.Vozila.Add(vozilo);
-                context.SaveChanges();
-           
+                context.SaveChanges();   
         }
     }
 }

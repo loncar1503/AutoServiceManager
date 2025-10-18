@@ -104,8 +104,7 @@ namespace Server
                         ServisFilter filter = JsonSerializer.Deserialize<ServisFilter>((JsonElement)req.Argument);
                         r.Result = Controller.Instance.SearchSevices(filter);
                         break;
-                    case Operation.SearchVehicles:
-                        
+                    case Operation.SearchVehicles:                     
                         var f = JsonSerializer.Deserialize<VehicleFilter>((JsonElement)req.Argument);
                         r.Result = Controller.Instance.SearchVehicles(f);
                             

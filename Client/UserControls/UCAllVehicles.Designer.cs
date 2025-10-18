@@ -90,7 +90,7 @@ namespace Client.UserControls
             lblRN.Name = "lblRN";
             lblRN.Size = new Size(73, 24);
             lblRN.StateCommon.ShortText.Color1 = Color.White;
-            lblRN.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRN.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRN.TabIndex = 6;
             lblRN.Values.Text = "Search";
             // 

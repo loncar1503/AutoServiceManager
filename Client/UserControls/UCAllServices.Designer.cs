@@ -41,6 +41,7 @@ namespace Client.UserControls
             btnGraph = new KryptonButton();
             kryptonButton2 = new KryptonButton();
             btnDelete = new KryptonButton();
+            kryptonLabel1 = new KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)dgvAllServices).BeginInit();
             SuspendLayout();
             // 
@@ -208,11 +209,11 @@ namespace Client.UserControls
             // chckAny
             // 
             chckAny.Anchor = AnchorStyles.None;
-            chckAny.Location = new Point(571, 34);
+            chckAny.Location = new Point(556, 38);
             chckAny.Name = "chckAny";
-            chckAny.Size = new Size(54, 25);
-            chckAny.StateCommon.ShortText.Color1 = Color.FromArgb(255, 128, 0);
-            chckAny.StateCommon.ShortText.Font = new Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chckAny.Size = new Size(56, 27);
+            chckAny.StateCommon.ShortText.Color1 = Color.Orange;
+            chckAny.StateCommon.ShortText.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             chckAny.TabIndex = 20;
             chckAny.Values.Text = "Any";
             chckAny.CheckedChanged += chckAny_CheckedChanged;
@@ -220,11 +221,11 @@ namespace Client.UserControls
             // lblJob
             // 
             lblJob.Anchor = AnchorStyles.None;
-            lblJob.Location = new Point(489, 35);
+            lblJob.Location = new Point(489, 38);
             lblJob.Name = "lblJob";
-            lblJob.Size = new Size(67, 24);
+            lblJob.Size = new Size(61, 27);
             lblJob.StateCommon.ShortText.Color1 = Color.Orange;
-            lblJob.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblJob.StateCommon.ShortText.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblJob.TabIndex = 42;
             lblJob.Values.Text = "Dates:";
             // 
@@ -351,11 +352,24 @@ namespace Client.UserControls
             btnDelete.Values.Text = "Delete";
             btnDelete.Click += btnDelete_Click;
             // 
+            // kryptonLabel1
+            // 
+            kryptonLabel1.Anchor = AnchorStyles.None;
+            kryptonLabel1.Location = new Point(202, 38);
+            kryptonLabel1.Name = "kryptonLabel1";
+            kryptonLabel1.Size = new Size(69, 27);
+            kryptonLabel1.StateCommon.ShortText.Color1 = Color.Orange;
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonLabel1.TabIndex = 46;
+            kryptonLabel1.Values.Text = "Search:";
+            kryptonLabel1.Paint += kryptonLabel1_Paint;
+            // 
             // UCAllServices
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
+            Controls.Add(kryptonLabel1);
             Controls.Add(btnDelete);
             Controls.Add(kryptonButton2);
             Controls.Add(btnGraph);
@@ -387,5 +401,6 @@ namespace Client.UserControls
         private KryptonButton btnGraph;
         private KryptonButton kryptonButton2;
         private KryptonButton btnDelete;
+        public KryptonLabel kryptonLabel1;
     }
 }

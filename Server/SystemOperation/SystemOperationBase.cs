@@ -11,26 +11,21 @@ namespace Server.SystemOperation
 {
     public abstract class SystemOperationBase
     {
-       // protected readonly Broker broker;
         public  AppDbContext context;
         private IDbContextTransaction transaction;
 
         public SystemOperationBase()
         {
             context = new AppDbContext();
-
         }
-
         public void ExecuteTemplate()
         {        
             try
             {
-                //broker.BeginTransaction();
                 transaction= context.Database.BeginTransaction();
                 ExecuteConcreteOperation();
                 context.SaveChanges();
                 transaction?.Commit();
-                // broker.Commit();
             }
             catch (Exception)
             {

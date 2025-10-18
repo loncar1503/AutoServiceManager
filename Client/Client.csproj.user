@@ -30,6 +30,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="FrmEditService.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="FrmLogin.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

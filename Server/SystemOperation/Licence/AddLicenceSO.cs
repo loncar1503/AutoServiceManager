@@ -11,8 +11,6 @@ namespace Server.SystemOperation.Licence
     internal class AddLicenceSO:SystemOperationBase
     {
         MajstorLicenca ml;
-
-
         public AddLicenceSO(MajstorLicenca ml)
         {
             this.ml = ml;

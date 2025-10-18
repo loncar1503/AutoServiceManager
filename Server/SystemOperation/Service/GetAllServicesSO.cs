@@ -12,15 +12,9 @@ namespace Server.SystemOperation.Service
     internal class GetAllServicesSO: SystemOperationBase
     {
         public List<Servis> Result { get; set; }
-        //private readonly AppDbContext context;
-        public GetAllServicesSO()
-        {
-            //context = new AppDbContext();
-
-        }
         protected override void ExecuteConcreteOperation()
         {
-            Result = context.Servisi.Include(s => s.Majstor).Include(s => s.Vozilo).ThenInclude(v => v.ModelVozila).ThenInclude(m => m.Marka).ToList();
+            Result = context.Servisi.Include(s => s.Majstor).Include(s => s.Vozilo).ThenInclude(v => v.ModelVozila).ThenInclude(m => m.Marka).OrderByDescending(s => s.DatumPrijema).ToList();
         }
     }
 }

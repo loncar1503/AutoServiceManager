@@ -15,13 +15,9 @@ namespace Server.SystemOperation.Service
     {
         public List<Servis> Result { get; set; }
         public ServisFilter filter;
-        //private readonly AppDbContext context;
-
         public SearchServiceSO(ServisFilter filter)
         {
             this.filter = filter;
-            //context = new AppDbContext();
-
         }
         protected override void ExecuteConcreteOperation()
         {
@@ -54,8 +50,6 @@ namespace Server.SystemOperation.Service
                     EF.Functions.Like(s.Vozilo.ModelVozila.Marka.Naziv, like)      
                 );
             }
-
-         
             return q.Include(s => s.Majstor)
                     .Include(s => s.Vozilo).ThenInclude(v => v.ModelVozila).ThenInclude(m => m.Marka)
                     .AsNoTracking()

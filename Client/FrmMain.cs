@@ -21,14 +21,15 @@ namespace Client
         Majstor majstor;
         //----------
         private readonly BgHostPanel host = new();
-        private readonly UserControl Allvehicles = new UCAllVehicles();
-        private readonly UserControl Addvehicles = new UCAddVehicle();
-        private readonly UserControl Allservices = new UCAllServices();
-        private readonly UserControl Addservices = new UCAddService();
-        private readonly UserControl AddLicence;
+        //private readonly UserControl Allvehicles = new UCAllVehicles();
+        //private readonly UserControl Addvehicles = new UCAddVehicle();
+        //private readonly UserControl Allservices = new UCAllServices();
+        //private readonly UserControl Addservices = new UCAddService();
+        //private readonly UserControl AddLicence;
         private readonly UserControl landing = new UserControl(); // može i običan UC
 
-        private readonly Image landingImg = Properties.Resources.Desktop___1__1_;
+        private readonly Image landingImg = Image.FromFile("Images/bckChatgpt.png"); 
+        //private readonly Image landingImg = Properties.Resources.Desktop___3__2_;
         private readonly Image appImg = Properties.Resources.Desktop___3__2_;
         //-----------------
         public FrmMain(Majstor majstor)
@@ -38,18 +39,18 @@ namespace Client
             this.Load += Form1_Load;
             this.Shown += (s, e) => CenterMenu(menuStrip1);
             //-----------------------
-            AddLicence = new UCAddLicence(majstor);
+            //AddLicence = new UCAddLicence(majstor);
 
             host.Dock = DockStyle.Fill;
             Controls.Add(host);
 
             // Svi UC transparentni da bi se videla pozadina roditelja
             PreparePage(landing);
-            PreparePage(Allservices);
-            PreparePage(Allvehicles);
-            PreparePage(Addservices);
-            PreparePage(Addvehicles);
-            PreparePage(AddLicence);
+            //PreparePage(Allservices);
+            //PreparePage(Allvehicles);
+            //PreparePage(Addservices);
+            //PreparePage(Addvehicles);
+            //PreparePage(AddLicence);
 
             ShowLanding(); // startno stanje
             //-------------------------
@@ -185,6 +186,8 @@ namespace Client
         }
 
         private void OnAllReservations(object s, EventArgs e) {
+            UserControl Allservices = new UCAllServices();
+            PreparePage(Allservices);
             ShowPage(Allservices);
             //pnlMain.Controls.Clear();
             //UCAllServices uCAllServices = new UCAllServices()
@@ -194,6 +197,8 @@ namespace Client
             //pnlMain.Controls.Add(uCAllServices);
         }
         private void OnAddReservation(object s, EventArgs e) {
+            UserControl Addservices = new UCAddService();
+            PreparePage(Addservices);
             ShowPage(Addservices);
             //pnlMain.Controls.Clear();
             //UCAddService ucAddService = new UCAddService()
@@ -203,7 +208,10 @@ namespace Client
             //pnlMain.Controls.Add(ucAddService);
         }
         private void OnAllVehicles(object s, EventArgs e) {
+            UserControl Allvehicles = new UCAllVehicles();
+            PreparePage(Allvehicles);
             ShowPage(Allvehicles);
+            
             //pnlMain.Controls.Clear();
             //UCAllVehicles ucAllVehicles= new UCAllVehicles()
             //{
@@ -213,6 +221,8 @@ namespace Client
 
         }
         private void OnAddVehicle(object s, EventArgs e) {
+            UserControl Addvehicles = new UCAddVehicle();
+            PreparePage(Addvehicles);
             ShowPage(Addvehicles);
             //pnlMain.Controls.Clear();
             //UCAddVehicle ucAddVehicle= new UCAddVehicle()
@@ -222,6 +232,8 @@ namespace Client
             //pnlMain.Controls.Add(ucAddVehicle);
         }
         private void OnAddLicence(object s, EventArgs e) {
+            UserControl AddLicence = new UCAddLicence(majstor);
+            PreparePage(AddLicence);
             ShowPage(AddLicence);
 
             //pnlMain.Controls.Clear();

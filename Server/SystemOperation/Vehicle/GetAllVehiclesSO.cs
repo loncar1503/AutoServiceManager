@@ -12,12 +12,6 @@ namespace Server.SystemOperation.Vehicle
     internal class GetAllVehiclesSO : SystemOperationBase
     {
         public List<Vozilo> Result { get; set; }
-       // private readonly AppDbContext context;
-
-        public GetAllVehiclesSO()
-        {
-           // context = new AppDbContext();
-        }
         protected override void ExecuteConcreteOperation()
         {
             Result= context.Vozila.Include(v=>v.Klijent).Include(v=>v.ModelVozila).ThenInclude(m=>m.Marka).ToList();

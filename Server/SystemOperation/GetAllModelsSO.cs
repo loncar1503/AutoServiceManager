@@ -11,14 +11,6 @@ namespace Server.SystemOperation
     internal class GetAllModelsSO: SystemOperationBase
     {
         public List<ModelVozila> Result { get; set; }
-        //private readonly AppDbContext context;
-
-        public GetAllModelsSO()
-        {
-           // context = new AppDbContext();
-
-
-        }
         protected override void ExecuteConcreteOperation()
         {
             Result = context.ModeliVozila.ToList();

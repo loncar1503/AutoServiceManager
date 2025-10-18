@@ -13,19 +13,14 @@ namespace Server.SystemOperation.Vehicle
     {
         public List<Vozilo> Result { get; set; }
         public VehicleFilter filter;
-        //private readonly AppDbContext context;
-
         public SearchVehicleSO(VehicleFilter filter)
         {
             this.filter = filter;
-            //context = new AppDbContext();
-
         }
         protected override void ExecuteConcreteOperation()
         {
             Result = SearchVehicle(filter);
         }
-
         private List<Vozilo> SearchVehicle(VehicleFilter f)
         {
             IQueryable<Vozilo> q = context.Vozila;
@@ -33,9 +28,7 @@ namespace Server.SystemOperation.Vehicle
             if (!string.IsNullOrWhiteSpace(f.Query))
             {
                 var txt = f.Query.Trim();
-                var like = $"%{txt}%";
-
-              
+                var like = $"%{txt}%";              
                 if (int.TryParse(txt, out var year))
                 {
                     q = q.Where(v =>
@@ -56,7 +49,6 @@ namespace Server.SystemOperation.Vehicle
                     );
                 }
             }
-
             return q.Include(v => v.ModelVozila).ThenInclude(m => m.Marka)
                     .Include(v => v.Klijent)
                     .AsNoTracking()

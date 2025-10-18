@@ -107,7 +107,7 @@ namespace Client
             kryptonLabel6.Name = "kryptonLabel6";
             kryptonLabel6.Size = new Size(53, 24);
             kryptonLabel6.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel6.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel6.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel6.TabIndex = 49;
             kryptonLabel6.Values.Text = "Note";
             // 
@@ -216,7 +216,7 @@ namespace Client
             kryptonLabel5.Name = "kryptonLabel5";
             kryptonLabel5.Size = new Size(184, 24);
             kryptonLabel5.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel5.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel5.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel5.TabIndex = 45;
             kryptonLabel5.Values.Text = "Service description:";
             // 
@@ -313,7 +313,7 @@ namespace Client
             kryptonLabel4.Name = "kryptonLabel4";
             kryptonLabel4.Size = new Size(149, 30);
             kryptonLabel4.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel4.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kryptonLabel4.StateCommon.ShortText.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             kryptonLabel4.TabIndex = 42;
             kryptonLabel4.Values.Text = "Service item";
             // 
@@ -324,7 +324,7 @@ namespace Client
             lblJob.Name = "lblJob";
             lblJob.Size = new Size(44, 24);
             lblJob.StateCommon.ShortText.Color1 = Color.Orange;
-            lblJob.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblJob.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblJob.TabIndex = 41;
             lblJob.Values.Text = "Job";
             // 
@@ -352,7 +352,7 @@ namespace Client
             kryptonLabel3.Name = "kryptonLabel3";
             kryptonLabel3.Size = new Size(109, 24);
             kryptonLabel3.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel3.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel3.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel3.TabIndex = 39;
             kryptonLabel3.Values.Text = "Total price:";
             // 
@@ -378,7 +378,7 @@ namespace Client
             kryptonLabel2.Name = "kryptonLabel2";
             kryptonLabel2.Size = new Size(58, 24);
             kryptonLabel2.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel2.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel2.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel2.TabIndex = 36;
             kryptonLabel2.Values.Text = "Date:";
             // 
@@ -407,7 +407,7 @@ namespace Client
             kryptonLabel1.Name = "kryptonLabel1";
             kryptonLabel1.Size = new Size(81, 24);
             kryptonLabel1.StateCommon.ShortText.Color1 = Color.Orange;
-            kryptonLabel1.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            kryptonLabel1.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             kryptonLabel1.TabIndex = 35;
             kryptonLabel1.Values.Text = "Vehicle:";
             // 
@@ -418,7 +418,7 @@ namespace Client
             lblMechanic.Name = "lblMechanic";
             lblMechanic.Size = new Size(100, 24);
             lblMechanic.StateCommon.ShortText.Color1 = Color.Orange;
-            lblMechanic.StateCommon.ShortText.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMechanic.StateCommon.ShortText.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMechanic.TabIndex = 34;
             lblMechanic.Values.Text = "Mechanic:";
             // 
