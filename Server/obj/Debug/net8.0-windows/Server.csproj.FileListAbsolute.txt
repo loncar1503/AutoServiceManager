@@ -188,3 +188,4 @@ D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\b
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
 D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+D:\FOLDERI SA C\FAKS\VII semestar\Softveri\Softveri projekat\Autoservis\Server\obj\Debug\net8.0-windows\Server.Properties.Resources.resources

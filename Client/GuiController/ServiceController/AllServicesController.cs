@@ -216,7 +216,7 @@ namespace Client.GuiController.ServiceController
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "http://localhost:3000/goto/y7ncBfjHg?orgId=1",
+                FileName = "http://localhost:3000",
                 UseShellExecute = true
             });
         }

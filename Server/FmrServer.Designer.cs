@@ -31,15 +31,19 @@
             lblStatus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             btnStart = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnStop = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblStatus
             // 
-            lblStatus.Location = new Point(421, 201);
+            lblStatus.Location = new Point(434, 258);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(149, 24);
+            lblStatus.Size = new Size(165, 29);
+            lblStatus.StateCommon.ShortText.Color1 = Color.Orange;
+            lblStatus.StateCommon.ShortText.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStatus.TabIndex = 2;
-            lblStatus.Values.Text = "Server nije pokrenut";
+            lblStatus.Values.Text = "Server is inactive!";
             // 
             // btnStart
             // 
@@ -80,6 +84,7 @@
             btnStart.StateTracking.Border.Width = 1;
             btnStart.TabIndex = 47;
             btnStart.Values.Text = "START";
+            btnStart.Click += btnStart_Click_1;
             // 
             // btnStop
             // 
@@ -120,17 +125,29 @@
             btnStop.StateTracking.Border.Width = 1;
             btnStop.TabIndex = 48;
             btnStop.Values.Text = "STOP";
+            btnStop.Click += btnStop_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._7934670;
+            pictureBox1.Location = new Point(434, 86);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(187, 104);
+            pictureBox1.TabIndex = 49;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(40, 40, 40);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(btnStop);
             Controls.Add(btnStart);
             Controls.Add(lblStatus);
             Name = "Form1";
-            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +156,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblStatus;
         public ComponentFactory.Krypton.Toolkit.KryptonButton btnStart;
         public ComponentFactory.Krypton.Toolkit.KryptonButton btnStop;
+        private PictureBox pictureBox1;
     }
 }
